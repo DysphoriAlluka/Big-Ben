@@ -5,8 +5,8 @@ const client = new Discord.Client();
 const moment = require("moment"); // Date/time formatting
 var txtgen = require('txtgen');
 const auth = require("./auth.json");
-const prefix = '--'
 const notifyChannel = '198399488614727680'
+const prefix = '--'
 const ownerId = '180050347589369856'
 
 client.login(auth.token);
@@ -26,9 +26,21 @@ client.on("ready", () => {
   channel.send(`${readyMessage}`);
 });
 
+//message and update when Ben joins or leaves a server
+client.on('guildCreate', guild =>{
+	guild.defaultChannel.send(":wave:, I'm a bot created to say bong every hour in UTC! Please contact <@180050347589369856> if you have any issues with the bot.");
+		var channel = client.channels.get(notifyChannel);
+			channel.send(`Ben was added to ${guild.name}, which is owned by ${guild.owner.user}.`)
+});
+client.on('guildDelete', guild =>{
+		var channel = client.channels.get(notifyChannel);
+			channel.send(`Ben was removed from ${guild.name}, which is owned by ${guild.owner.user}.`)
+});
+
 //message replies, commands, and announcements
 client.on("message", message => {  
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
+	var allpainnogainprison = client.channels.get('252503882951950340');
 	var feeshmain = client.channels.get('323639445842558977');//feesh
 		if(message.author.bot)return;
 		if(message.content.startsWith('//'))return;
@@ -52,6 +64,9 @@ client.on("message", message => {
 					if(message.channel.id =='337643020352749569'){;
 						let paragraph = txtgen.paragraph();
 							allpainnogainmain.send(paragraph);
+					}
+					if(message.channel.id =='337727000036769792'){;
+						allpainnogainprison.send(message.content);
 					}
 					if(message.channel.id =='335766194525044739'){;
 						feeshmain.send(message.content);
@@ -174,8 +189,6 @@ client.on('guildMemberRemove', member => {
 //big ben base, bongs every hour in utc
 var schedule = require('node-schedule');
 var schedule = require('node-schedule');
-
-client.guilds.map(guild => guild.defaultChannel.send ('yo'));
 
 client.on('ready', () => {
 

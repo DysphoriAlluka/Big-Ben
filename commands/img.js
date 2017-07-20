@@ -17,6 +17,7 @@ exports.run = async(client, message, date, Discord, args) => {
       } else {
         let image = response[0].url;
         const embed = await new Discord.RichEmbed()
+          .setAuthor(`Google`, 'https://a.safe.moe/F3RvU.png')
           .setColor(`FE8E46`)
           .setTitle(`${search}`)
           .setDescription(image)
