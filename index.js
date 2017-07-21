@@ -76,7 +76,6 @@ client.on("message", message => {
 
 //command handler
 client.on("message", message => {
-  var date = moment(new Date()).tz(auth.locale).format("DD/MM/YYYY, HH:mm:ss z");
   const args = message.content.split(" "); // let args = message.content.split(" ").slice(1);
 
   if (!message.content.startsWith(prefix)) return;

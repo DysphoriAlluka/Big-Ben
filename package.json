@@ -1,6 +1,6 @@
 {
   "name": "BigBen",
-  "version": "2.5",
+  "version": "2.0",
   "description": "Bongs every full hour, written in discord.js",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,12 @@
   "dependencies": {
     "cleverbot-node": "^0.3.11",
     "discord.js": "^11.1.0",
+    "ffmpeg-binaries": "^3.2.2-3",
     "google-images": "^2.1.0",
     "node-schedule": "^1.2.3",
-    "txtgen": "^2.0.1"
+    "opusscript": "0.0.3",
+    "txtgen": "^2.0.1",
+    "ytdl-core": "^0.14.4"
   },
   "false": {}
 }
