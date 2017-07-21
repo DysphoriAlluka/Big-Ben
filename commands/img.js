@@ -1,4 +1,4 @@
-exports.run = async(client, message, date, Discord, args) => {
+exports.run = async(client, message, Discord, args) => {
   const config = require("../auth.json");
   const GoogleImages = require("google-images");
   const gClient = new GoogleImages(config.googleCSE, config.googleAPI);

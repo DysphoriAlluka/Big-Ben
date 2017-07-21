@@ -1,4 +1,4 @@
-exports.run = async(client, message, date, Discord, args) => {
+exports.run = async(client, message, Discord, args) => {
   var colour = args.join(" ");
 
   if (((colour.indexOf("#") === 0) && colour.length === 7) || (!isNaN(colour) && colour.length <= 8 && colour < 16777215)) {
