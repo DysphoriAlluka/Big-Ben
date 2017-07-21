@@ -1,5 +1,5 @@
 # Info
-Big Ben is a bot that bongs every hour in. It is more or less a private discord bot, and has some utilities. 
+Big Ben is a bot that bongs every hour in UTC and has some utilities. More commands are to come, as this bot is still in development.
 
 # Commands
 ### `there are unlisted, secret commands.`
@@ -8,8 +8,11 @@ Big Ben is a bot that bongs every hour in. It is more or less a private discord 
 ### `article`
 *Description:* `Generates a random article.`
 *Usage:* `article`
+### `help`  
+*Description:* `Shows list of commands and gives basic information on the bot`  
+*Usage:* `help`  
 ### `insult`  
-*Description:* `Insults someone using the list of premade insults`  
+*Description:* `Insults someone using the list of premade insults - note: THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.`  
 *Usage:* `insult`  
 ### `paragraph`
 *Description:* `Generates a random paragraph.`
@@ -26,7 +29,7 @@ Big Ben is a bot that bongs every hour in. It is more or less a private discord 
 *Description:* `Pings the bot and gives the ms latency`  
 *Usage:* `bing`  
 ### `colour`  
-*Description:* `Shows preview for a given hex colour`  
+*Description:* `Shows preview for a given colour`  
 *Usage:* `colour [hex]`  
 ### `img`  
 *Description:* `Searches google images`  

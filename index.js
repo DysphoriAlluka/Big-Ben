@@ -4,6 +4,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const moment = require("moment"); // Date/time formatting
 var txtgen = require('txtgen');
+var schedule = require('node-schedule');
 const auth = require("./auth.json");
 const notifyChannel = '198399488614727680'
 const prefix = '--'
@@ -22,7 +23,7 @@ client.on("ready", () => {
   var channel = client.channels.get(notifyChannel);
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setGame("in your head.");
+  client.user.setGame("in your head. | --help");
   channel.send(`${readyMessage}`);
 });
 
@@ -97,7 +98,7 @@ client.on("message", message => {
 client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 	try {
 		if(oldMessage.author.bot) return;
-		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(oldMessage.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
 		if(oldMessage.attachments.size > 0) return;
     	let chan = client.channels.get("335784491425726474");
 		const embed = new Discord.RichEmbed()
@@ -178,9 +179,6 @@ client.on('guildMemberRemove', member => {
 });
 
 //big ben base, bongs every hour in utc
-var schedule = require('node-schedule');
-var schedule = require('node-schedule');
-
 client.on('ready', () => {
 
 	var rule = new schedule.RecurrenceRule(); 
