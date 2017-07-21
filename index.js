@@ -97,7 +97,7 @@ client.on("message", message => {
 client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 	try {
 		if(oldMessage.author.bot) return;
-		if(oldMessage.author.id === ownerId) return;
+		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
 		if(oldMessage.attachments.size > 0) return;
     	let chan = client.channels.get("335784491425726474");
 		const embed = new Discord.RichEmbed()
@@ -114,9 +114,9 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 })
 client.on('messageDelete', message => { //logs deleted messages
 	try {
-		if(message.author.id === ownerId) return;
-		if(message.attachments.size > 0) return;
 		if(message.author.bot) return;
+		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("335818764002131969");
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
@@ -133,7 +133,7 @@ client.on('messageDelete', message => { //logs deleted messages
 client.on("message", message => { //logs all messages (??)
 	try {
 		if(message.author.bot) return;
-		if(message.guild.id == '198399488614727680') return;
+		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
 		if(message.attachments.size > 0) return;
    		let chan = client.channels.get('336120496313860096');
 		const embed = new Discord.RichEmbed()
