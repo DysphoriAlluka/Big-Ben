@@ -1,5 +1,5 @@
 exports.run = async (client, message, args) => {
-  const sayMessage = args.join(" ");
- 	    message.delete().catch(O_o=>{}); 
-        	return message.channel.send(sayMessage, {tts: true}).catch(console.error);
+  let sayttsMessage = message.content.split(/\s+/g).slice(1).join(" ");
+ 	    message.delete().catch(O_o=>{})
+        	return message.channel.send(sayttsMessage, {tts: true}).catch(console.error);
 }
