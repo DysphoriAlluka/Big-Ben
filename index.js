@@ -116,14 +116,14 @@ client.on('messageDelete', message => { //logs deleted messages
 	try {
 		if(message.author.id === ownerId) return;
 		if(message.attachments.size > 0) return;
-		let chan = client.channels.get("335818764002131969");
 		if(message.author.bot) return;
+		let chan = client.channels.get("335818764002131969");
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
   	 .setTimestamp()
 	 .addField(message.guild.name + ', ' + message.channel.name,
-	 message )
+	    message )
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel);
@@ -132,18 +132,18 @@ client.on('messageDelete', message => { //logs deleted messages
 })
 client.on("message", message => { //logs all messages (??)
 	try {
-	if(message.author.bot) return;
-	if(message.guild.id == '198399488614727680') return;
-	if(message.attachments.size > 0) return;
-    let chan = client.channels.get('336120496313860096');
-	const embed = new Discord.RichEmbed()
-  .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
-  .setColor('2C2A51')
-  .setTimestamp()
-  .addField(message.guild.name + ', ' + message.channel.name,
-	message )
+		if(message.author.bot) return;
+		if(message.guild.id == '198399488614727680') return;
+		if(message.attachments.size > 0) return;
+   		let chan = client.channels.get('336120496313860096');
+		const embed = new Discord.RichEmbed()
+ 	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
+ 	 .setColor('2C2A51')
+ 	 .setTimestamp()
+ 	 .addField(message.guild.name + ', ' + message.channel.name,
+    	message )
  	chan.send({embed})
-	} catch(err) {
+	} catch (err) {
 		var channel = client.channels.get(notifyChannel);
 			channel.send('Something went wrong with the message logs.')
 	}
