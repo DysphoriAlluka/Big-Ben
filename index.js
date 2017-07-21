@@ -30,11 +30,11 @@ client.on("ready", () => {
 client.on('guildCreate', guild =>{
 	guild.defaultChannel.send(":wave:, I'm a bot created to say bong every hour in UTC! Please contact <@180050347589369856> if you have any issues with the bot.");
 		var channel = client.channels.get(notifyChannel);
-			channel.send(`Ben was added to ${guild.name}, which is owned by ${guild.owner.user}.`)
+			channel.send(`Ben was added to ${guild.name}, which is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 client.on('guildDelete', guild =>{
 		var channel = client.channels.get(notifyChannel);
-			channel.send(`Ben was removed from ${guild.name}, which is owned by ${guild.owner.user}.`)
+			channel.send(`Ben was removed from ${guild.name}, which is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 
 //message replies, commands, and announcements
@@ -99,16 +99,13 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 		if(oldMessage.author.bot) return;
 		if(oldMessage.author.id === ownerId) return;
 		if(oldMessage.attachments.size > 0) return;
-		let guild = oldMessage.guild;
-		let channelname = oldMessage.channel.name;
-  		let fulledit = client.guilds.find("name", "Homo");
-    	let chan = fulledit.channels.find("name", "logging-edited-messages");
+    	let chan = client.channels.get("335784491425726474");
 		const embed = new Discord.RichEmbed()
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
   	.setTimestamp()
-  	.addField(guild.name + ', ' + channelname,
-		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' )
+  	.addField(oldMessage.guild.name + ', ' + oldMessage.channel.name,
+		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel);
@@ -119,16 +116,13 @@ client.on('messageDelete', message => { //logs deleted messages
 	try {
 		if(message.author.id === ownerId) return;
 		if(message.attachments.size > 0) return;
-		let guild = message.guild;
-		let channelname = message.channel.name;
-  		let fulldelete = client.guilds.find("name", "Homo");
-		let chan = fulldelete.channels.find("name", "logging-deleted-messages");
+		let chan = client.channels.get("335818764002131969");
 		if(message.author.bot) return;
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
   	 .setTimestamp()
-	 .addField(guild.name + ', ' + channelname,
+	 .addField(message.guild.name + ', ' + message.channel.name,
 	 message )
  	chan.send({embed})
 	} catch(err) {
@@ -141,15 +135,12 @@ client.on("message", message => { //logs all messages (??)
 	if(message.author.bot) return;
 	if(message.guild.id == '198399488614727680') return;
 	if(message.attachments.size > 0) return;
-	let guild = message.guild;
-	let channelname = message.channel.name;
-    let fulldelete = client.guilds.find("name", "Homo");
-    let chan = fulldelete.channels.find("name", "logging-all-messages");
+    let chan = client.channels.get('336120496313860096');
 	const embed = new Discord.RichEmbed()
   .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
   .setColor('2C2A51')
   .setTimestamp()
-  .addField(guild.name + ', ' + channelname,
+  .addField(message.guild.name + ', ' + message.channel.name,
 	message )
  	chan.send({embed})
 	} catch(err) {
@@ -166,7 +157,7 @@ client.on('guildMemberAdd', member => {
   const embed = new Discord.RichEmbed()
   .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
   .setColor('F0A38F')
-  .setFooter('Big Ben sees all™')
+  .setFooter(`Big Ben sees all™ | ${guild.id}`)
   .setTimestamp()
   .addField('User Update',
     `${member.user}, has joined ` + guild )
@@ -179,7 +170,7 @@ client.on('guildMemberRemove', member => {
   const embed = new Discord.RichEmbed()
   .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
   .setColor('7C7F86')
-  .setFooter('Big Ben sees all™')
+  .setFooter(`Big Ben sees all™ | ${guild.id}`)
   .setTimestamp()
   .addField('User update',
     `${member.user} just left `+ guild)
