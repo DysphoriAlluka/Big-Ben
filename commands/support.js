@@ -1,4 +1,5 @@
 exports.run = async (client, message) => {
+    const notifyChannel = '198399488614727680'
     var channel = client.channels.get(notifyChannel)
     let supportMessage = message.content.split(/\s+/g).slice(1).join(" ");
     if (!supportMessage) return message.channel.send(`Please add an issue to your message.`);
