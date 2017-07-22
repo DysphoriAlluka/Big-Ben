@@ -37,3 +37,6 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* `Searches google images`  
 *Usage:* `img <search>`  
 *Note:* `This command is limied to only 100 searches per day, please do not spam it.`
+### `support`
+*Description:* `Sends your message to the support server.`
+*Usage:* `support [questions, inquiries, feedback, issues, or bugs]`

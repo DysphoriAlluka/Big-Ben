@@ -1,3 +1,3 @@
 exports.run = async (client, message) => {
-    message.channel.send(`Hi!! My name is Ben and I\'m a bot created to say bong every hour in UTC!\n I was written using the discord.js library and I am currently still in development.\n Feel free to contact <@180050347589369856> if you have any feedback, issues, or are in need of support.\n To add me to your server, use this link: https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 ! /n View a list of my commands here! https://hastebin.com/ucijebovup.md `)
+    message.channel.send(`Hi!! My name is Ben and I\'m a bot created to say bong every hour in UTC!\n I am currently still in development.\n Feel free to contact <@180050347589369856> if you have any feedback, issues, or are in need of support.\n To add me to your server, use this link: https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 !`)
 }
