@@ -1,4 +1,4 @@
-exports.run = async (client, message) => {
+exports.run = async (client, Discord, message) => {
     const notifyChannel = '198399488614727680'
     var channel = client.channels.get(notifyChannel)
     let supportMessage = message.content.split(/\s+/g).slice(1).join(" ");
