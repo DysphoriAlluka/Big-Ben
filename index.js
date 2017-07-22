@@ -6,7 +6,7 @@ const moment = require("moment"); // Date/time formatting
 var txtgen = require('txtgen');
 var schedule = require('node-schedule');
 const auth = require("./auth.json");
-const notifyChannel = client.channels.get('198399488614727680');
+const notifyChannel = '198399488614727680'
 const prefix = '--'
 const ownerId = '180050347589369856'
 
@@ -20,19 +20,22 @@ const readyMessage = `Big Ben is up and running! - Time taken: **${elapsedTimeS}
 console.log('Starting Big Ben!')
 //ready and game status, message ready to main server
 client.on("ready", () => {
+  var channel = client.channels.get(notifyChannel)
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
   client.user.setGame("in your head. | --help");
-  notifyChannel.send(`${readyMessage}`);
+  channel.send(`${readyMessage}`);
 });
 
 //message and update when Ben joins or leaves a server
 client.on('guildCreate', guild =>{
+	var channel = client.channels.get(notifyChannel)
 	guild.defaultChannel.send(":wave:, I'm a bot created to say bong every hour in UTC! Please contact <@180050347589369856> if you have any issues with the bot.");
-			notifyChannel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
+			channel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 client.on('guildDelete', guild =>{
-			notifyChannel.send(`Ben was removed from ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
+		var channel = client.channels.get(notifyChannel)
+			channel.send(`Ben was removed from ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 
 //message replies, commands, and announcements
@@ -105,7 +108,8 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
 	} catch(err) {
-			notifyChannel.send('Something went wrong with the edited message logs.');
+		var channel = client.channels.get(notifyChannel)
+			channel.send('Something went wrong with the edited message logs.');
 	}
 })
 client.on('messageDelete', message => { //logs deleted messages
@@ -122,7 +126,8 @@ client.on('messageDelete', message => { //logs deleted messages
 	    message )
  	chan.send({embed})
 	} catch(err) {
-			notifyChannel.send('Something went wrong with the deleted message logs.');
+		var channel = client.channels.get(notifyChannel)
+			channel.send('Something went wrong with the deleted message logs.');
 	}
 })
 client.on("message", message => { //logs all messages (??)
@@ -139,13 +144,15 @@ client.on("message", message => { //logs all messages (??)
     	message )
  	chan.send({embed})
 	} catch (err) {
-			notifyChannel.send('Something went wrong with the message logs.')
+		var channel = client.channels.get(notifyChannel)
+			channel.send('Something went wrong with the message logs.')
 	}
 })
 
 //server announcements for leaves and joins, sends it to main server
 //server announcement for when someone joins
 client.on('guildMemberAdd', member => {
+  var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
   .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
@@ -154,10 +161,11 @@ client.on('guildMemberAdd', member => {
   .setTimestamp()
   .addField('User Update',
     `${member.user}, has joined ` + guild )
-  notifyChannel.send({embed});
+  channel.send({embed});
 });
 //server announcement for when someone leaves
 client.on('guildMemberRemove', member => {
+  var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
   .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
@@ -166,7 +174,7 @@ client.on('guildMemberRemove', member => {
   .setTimestamp()
   .addField('User update',
     `${member.user} just left `+ guild)
-  notifyChannel.send({embed});
+  channel.send({embed});
 });
 
 //big ben base, bongs every hour in utc

@@ -1,4 +1,5 @@
 exports.run = async (client, message) => {
+    var channel = client.channels.get(notifyChannel)
     let supportMessage = message.content.split(/\s+/g).slice(1).join(" ");
     if (!supportMessage) return message.channel.send(`Please add an issue to your message.`);
     const embed = new Discord.RichEmbed()
@@ -9,6 +10,6 @@ exports.run = async (client, message) => {
         .setFooter(`Guild ID: ${guild.id}`)
  	    .addField(message.guild.name + ', ' + message.channel.name,
     	supportMessage )
- 	notifyChannel.send({embed})
+ 	channel.send({embed})
         return message.channel.send('Your message has been sent. You will receive a reply in no less than a day, given that it is a serious issue.')
 }
