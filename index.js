@@ -130,24 +130,6 @@ client.on('messageDelete', message => { //logs deleted messages
 			channel.send('Something went wrong with the deleted message logs.');
 	}
 })
-client.on("message", message => { //logs all messages (??)
-	try {
-		if(message.author.bot) return;
-		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
-		if(message.attachments.size > 0) return;
-   		let chan = client.channels.get('336120496313860096');
-		const embed = new Discord.RichEmbed()
- 	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
- 	 .setColor('2C2A51')
- 	 .setTimestamp()
- 	 .addField(message.guild.name + ', ' + message.channel.name,
-    	message )
- 	chan.send({embed})
-	} catch (err) {
-		var channel = client.channels.get(notifyChannel)
-			channel.send('Something went wrong with the message logs.')
-	}
-})
 
 //server announcements for leaves and joins, sends it to main server
 //server announcement for when someone joins
