@@ -2,7 +2,6 @@
 //botURL = https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const moment = require("moment"); // Date/time formatting
 var txtgen = require('txtgen');
 var schedule = require('node-schedule');
 const auth = require("./auth.json");
@@ -12,19 +11,14 @@ const ownerId = '180050347589369856'
 
 client.login(auth.token);
 
-const beginTime = process.hrtime()
-const elapsedTime = process.hrtime(beginTime)
-const elapsedTimeS = Math.floor((elapsedTime[0] * 1e9 + elapsedTime[1]) / 1e9)
-const readyMessage = `Big Ben is up and running! - Time taken: **${elapsedTimeS}s**`
-
 console.log('Starting Big Ben!')
 //ready and game status, message ready to main server
 client.on("ready", () => {
-  var channel = client.channels.get(notifyChannel)
+  var channel = client.channels.get(notifyChannel);
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
   client.user.setGame("in your head. | --help");
-  channel.send(`${readyMessage}`);
+  channel.send(`Big Ben is up and running!`);
 });
 
 //message and update when Ben joins or leaves a server
@@ -41,10 +35,13 @@ client.on('guildDelete', guild =>{
 //message replies, commands, and announcements
 client.on("message", message => {  
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
-	var allpainnogainprison = client.channels.get('252503882951950340');
+	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
 	var feeshmain = client.channels.get('323639445842558977');//feesh
+	var aphrodite = client.servers.find('name', 'Aprodite\'s Castle');
+	var aphroditeplace = aphrodite.channels.find('name', 'castle');
 		if(message.author.bot)return;
-		if(message.content.startsWith('//'))return;
+		if(message.content.startsWith('//'))return message.react('🙊');
+		if(message.content.startsWith('--'))return;
 			if(message.content.includes('<@329722471295221760>')){
 				message.reply("bong?");
 			};
@@ -72,6 +69,9 @@ client.on("message", message => {
 					if(message.channel.id =='335766194525044739'){;
 						feeshmain.send(message.content);
 					}
+					if(message.channel.id == '340245806139572234'){;
+						aphroditeplace.send(message.content);
+					}
 }); 	
 
 //command handler
@@ -86,11 +86,9 @@ client.on("message", message => {
   try {
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, Discord, args);
-
   } catch (err) {
     return console.error(err);
   }
-
 });
 
 //logs given messages 
@@ -118,6 +116,23 @@ client.on('messageDelete', message => { //logs deleted messages
 		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
 		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("335818764002131969");
+		const embed = new Discord.RichEmbed()
+ 	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
+ 	 .setColor('F56991')
+  	 .setTimestamp()
+	 .addField(message.guild.name + ', ' + message.channel.name,
+	    message )
+ 	chan.send({embed})
+	} catch(err) {
+		var channel = client.channels.get(notifyChannel)
+			channel.send('Something went wrong with the deleted message logs.');
+	}
+})
+client.on('message', message => { //logs all messages
+	try {
+		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(message.attachments.size > 0) return;
+		let chan = client.channels.get("340245516715687937");
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
