@@ -101,7 +101,7 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
 	.setTimestamp()
-	.setFooter(`Channel ID: ${oldMessage.channel.id}`)
+	.setFooter(`Channel ID: ${oldMessage.channel.id} | Guild ID ${oldMessage.guild.id}`)
   	.addField(oldMessage.guild.name + ', ' + oldMessage.channel.name,
 		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
@@ -120,7 +120,7 @@ client.on('messageDelete', message => { //logs deleted messages
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
 	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id}`)
+	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID ${message.guild.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
@@ -139,7 +139,7 @@ client.on('message', message => { //logs all messages
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
 	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id}`)
+	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID ${message.guild.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
