@@ -37,8 +37,7 @@ client.on("message", message => {
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
 	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
 	var feeshmain = client.channels.get('323639445842558977');//feesh
-	var aphrodite = client.servers.find('name', 'Aprodite\'s Castle');
-	var aphroditeplace = aphrodite.channels.find('name', 'castle');
+	let aphroditeplace = client.channels.find('name', 'castle');
 		if(message.author.bot)return;
 		if(message.content.startsWith('//'))return message.react('🙊');
 		if(message.content.startsWith('--'))return;
@@ -101,7 +100,8 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 		const embed = new Discord.RichEmbed()
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
-  	.setTimestamp()
+	.setTimestamp()
+	.setFooter(`Channel ID: ${oldMessage.channel.id}`)
   	.addField(oldMessage.guild.name + ', ' + oldMessage.channel.name,
 		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
@@ -119,7 +119,8 @@ client.on('messageDelete', message => { //logs deleted messages
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
-  	 .setTimestamp()
+	 .setTimestamp()
+	 .setFooter(`Channel ID: ${message.channel.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
@@ -131,18 +132,20 @@ client.on('messageDelete', message => { //logs deleted messages
 client.on('message', message => { //logs all messages
 	try {
 		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(message.author.bot) return;
 		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("340245516715687937");
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
-  	 .setTimestamp()
+	 .setTimestamp()
+	 .setFooter(`Channel ID: ${message.channel.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel)
-			channel.send('Something went wrong with the deleted message logs.');
+			channel.send('Something went wrong with the message logs.');
 	}
 })
 
