@@ -101,7 +101,7 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
 	.setTimestamp()
-	.setFooter(`Channel ID: ${oldMessage.channel.id} | Guild ID ${oldMessage.guild.id}`)
+	.setFooter(`Channel ID: ${oldMessage.channel.id} | Guild ID: ${oldMessage.guild.id}`)
   	.addField(oldMessage.guild.name + ', ' + oldMessage.channel.name,
 		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
