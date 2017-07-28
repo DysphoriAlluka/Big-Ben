@@ -90,7 +90,7 @@ client.on("message", message => {
 client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 	try {
 		if(oldMessage.author.bot) return;
-		if(oldMessage.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(oldMessage.guild.id == '198399488614727680' && oldMessage.author.id == '180050347589369856') return;
 		if(oldMessage.attachments.size > 0) return;
     	let chan = client.channels.get("335784491425726474");
 		const embed = new Discord.RichEmbed()
