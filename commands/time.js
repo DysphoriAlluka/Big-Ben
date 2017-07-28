@@ -21,5 +21,6 @@ exports.run = async (client, message, args) => {
     return message.channel.send(`${clock} The time in '${place}' is ${tMoment}.`)
   } catch (err) {
     message.channel.send(`Location \`${location}\` was not found!`);
+    console.log(err);
   } 
 }
