@@ -17,7 +17,7 @@ client.on("ready", () => {
   var channel = client.channels.get(notifyChannel);
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setGame("as BigBoss | --help machine updated 👌");
+  client.user.setGame("with time | --help machine updated 👌");
   channel.send(`Big Ben is up and running!`);
 });
 
@@ -37,7 +37,6 @@ client.on("message", message => {
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
 	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
 	var feeshmain = client.channels.get('323639445842558977');//feesh
-	let aphroditeplace = client.channels.find('name', 'castle');
 		if(message.author.bot)return;
 		if(message.content.startsWith('//'))return message.react('🙊');
 		if(message.content.startsWith('--'))return;
@@ -67,9 +66,6 @@ client.on("message", message => {
 					}
 					if(message.channel.id =='335766194525044739'){;
 						feeshmain.send(message.content);
-					}
-					if(message.channel.id == '340245806139572234'){;
-						aphroditeplace.send(message.content);
 					}
 }); 	
 
@@ -120,7 +116,7 @@ client.on('messageDelete', message => { //logs deleted messages
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
 	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID ${message.guild.id}`)
+	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID: ${message.guild.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
@@ -139,7 +135,7 @@ client.on('message', message => { //logs all messages
  	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
 	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID ${message.guild.id}`)
+	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID: ${message.guild.id}`)
 	 .addField(message.guild.name + ', ' + message.channel.name,
 	    message )
  	chan.send({embed})
