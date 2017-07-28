@@ -149,6 +149,14 @@ client.on('message', message => { //logs all messages
 	}
 })
 
+//removes bot's message if reacted with timer
+client.on("messageReactionAdd", (messageReaction, user) => {
+	if(messageReaction.message.author.id !== '329722471295221760') return;
+	if(messageReaction.message.react('⏲')) {
+        messageReaction.message.delete();
+      }
+})
+
 //server announcements for leaves and joins, sends it to main server
 //server announcement for when someone joins
 client.on('guildMemberAdd', member => {
