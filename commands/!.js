@@ -4,7 +4,9 @@ exports.run = async(client, message, Discord, args) => {
     clbot.configure({botapi: "CC30y25bSJBl1pLmgwxRZHmMUjA"});
     cleverbot.prepare(function() {});
 
-    clbot.write(message.content, (response) => {
+    let clMessage = message.content.split(/\s+/g).slice(1).join(" ");
+
+    clbot.write(clMessage, (response) => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(response.output).catch(console.error);

@@ -8,9 +8,6 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### article
 *Description:* Generates a random article.
 *Usage:* article
-### help  
-*Description:* Shows list of commands and gives basic information on the bot  
-*Usage:* help  
 ### insult  
 *Description:* Insults someone using the list of premade insults - note: THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.  
 *Usage:* insult  
@@ -33,6 +30,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### colour  
 *Description:* Shows preview for a given colour  
 *Usage:* colour [hex]  
+### help  
+*Description:* Shows list of commands and gives basic information on the bot  
+*Usage:* help  
 ### img  
 *Description:* Searches google images  
 *Usage:* img <search>  
@@ -40,3 +40,6 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### support
 *Description:* Sends your message to the support server.
 *Usage:* support [questions, inquiries, feedback, issues, or bugs] <--dm>
+### time
+*Description:* Tells the time in a specific location.
+*Usage:* time [place]
