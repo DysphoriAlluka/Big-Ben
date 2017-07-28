@@ -152,6 +152,7 @@ client.on('message', message => { //logs all messages
 //removes bot's message if reacted with timer
 client.on("messageReactionAdd", (messageReaction, user) => {
 	if(messageReaction.message.author.id !== '329722471295221760') return;
+	if(user.bot) return;
 	if(messageReaction.message.react('⏲')) {
         messageReaction.message.delete();
       }
