@@ -22,6 +22,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Talk to the bot using the cleverbot api.
 *Usage:* ! [sentence]
 *Note:* This command is limited to only 5000 usages per month, please do not spam it.
+### weather
+*Description:* Shows detailed weather information for the given location.
+*Usage:* weather [location]
   
 ## Utility
 ### bing  
@@ -32,7 +35,7 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Usage:* colour [hex]  
 ### help  
 *Description:* Shows list of commands and gives basic information on the bot  
-*Usage:* help  
+*Usage:* help <command name> 
 ### img  
 *Description:* Searches google images  
 *Usage:* img <search>  
