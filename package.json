@@ -16,6 +16,8 @@
     "discord.js": "^11.1.0",
     "google-images": "^2.1.0",
     "node-schedule": "^1.2.3",
+    "moment": "^2.18.1",
+    "snekfetch": "^3.2.4",
     "txtgen": "^2.0.1"
   },
   "false": {}
