@@ -115,3 +115,9 @@ exports.insults = [
   ' You look like you came straight out of the African wild.',
   ' My lungs are failing from inhaling all the charcoal from this circle of the hate and the lies.'
 ]
+
+//clocks for time command
+exports.clocks = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚']
+
+//date formats
+exports.fullDateFormat = 'HH:mm:ss'
