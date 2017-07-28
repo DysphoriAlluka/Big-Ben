@@ -125,25 +125,6 @@ client.on('messageDelete', message => { //logs deleted messages
 			channel.send('Something went wrong with the deleted message logs.');
 	}
 })
-client.on('message', message => { //logs all messages
-	try {
-		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
-		if(message.author.bot) return;
-		if(message.attachments.size > 0) return;
-		let chan = client.channels.get("340245516715687937");
-		const embed = new Discord.RichEmbed()
- 	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
- 	 .setColor('F56991')
-	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID: ${message.guild.id}`)
-	 .addField(message.guild.name + ', ' + message.channel.name,
-	    message )
- 	chan.send({embed})
-	} catch(err) {
-		var channel = client.channels.get(notifyChannel)
-			channel.send('Something went wrong with the message logs.');
-	}
-})
 
 //removes bot's message if reacted with timer
 client.on("messageReactionAdd", (messageReaction, user) => {
