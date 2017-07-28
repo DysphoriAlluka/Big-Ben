@@ -41,5 +41,5 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Sends your message to the support server.
 *Usage:* support [questions, inquiries, feedback, issues, or bugs] <--dm>
 ### time
-*Description:* Tells the time in a specific location.
+*Description:* Tells the date and time in a specific location.
 *Usage:* time [place]

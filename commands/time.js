@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
     const clock = client.consts.clocks[parseInt(time.split(':')[0], 10) % 12]
 
     const tMoment = moment(`${date} ${time}`)
-    return message.channel.send(`${clock} The time in '${place}' is ${tMoment}.`)
+    return message.channel.send(`${clock} The date and time in '${place}' is ${tMoment}.`)
   } catch (err) {
     message.channel.send(`Location \`${location}\` was not found!`);
     console.log(err);
