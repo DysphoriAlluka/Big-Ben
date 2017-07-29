@@ -146,4 +146,14 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Usage:__`, `--weather [location]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
+    if(message.content.includes('wiki')) { //wikipedia command
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Wiki`, client.user.displayAvatarURL)
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Returns the summary of the first matching search result from Wikipedia.` )
+        .addField(`__Usage:__`, `--wiki [query]`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
 }

@@ -9,7 +9,7 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Generates a random article.
 *Usage:* article
 ### insult  
-*Description:* Insults someone using the list of premade insults
+*Description:* Insults someone using the list of premade insults.
 *Usage:* insult  
 *Note:* THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.
 ### paragraph
@@ -25,16 +25,19 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### weather
 *Description:* Shows detailed weather information for the given location.
 *Usage:* weather [location]
+### wiki
+*Description:* Returns the summary of the first matching search result from Wikipedia.
+*Usage:* wiki [query]
   
 ## Utility
 ### bing  
-*Description:* Pings the bot and gives the ms latency  
+*Description:* Pings the bot and gives the ms latency. 
 *Usage:* bing  
 ### colour  
-*Description:* Shows preview for a given hex colour  
+*Description:* Shows preview for a given hex colour.
 *Usage:* colour [hex]  
 ### help  
-*Description:* Shows list of commands and gives basic information on the bot  
+*Description:* Shows list of commands and gives basic information on the bot.
 *Usage:* help <command name> 
 ### img  
 *Description:* Searches google images  
