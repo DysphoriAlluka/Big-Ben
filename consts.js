@@ -113,6 +113,7 @@ exports.insults = [
   ' You must feel like shit \'cause you are.',
   ' You\'re a fucking waste of my time and energy, cunt.',
   ' You look like you came straight out of the African wild.',
+  ' You\'re disposable like the paper plates you eat off cause you can\'t afford anything else.',
   ' My lungs are failing from inhaling all the charcoal from this circle of the hate and the lies.'
 ]
 

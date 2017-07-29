@@ -49,3 +49,6 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### time
 *Description:* Tells the date and time in a specific location.
 *Usage:* time [place]
+### translate
+*Description:* Translates the given text to a specified language.
+*Usage:* translate [language] [foreign text]
