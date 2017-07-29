@@ -5,7 +5,7 @@ exports.run = async (client, message, Discord, args) => {
     	.setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
 	    .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .setDescription('Hi! My name is Ben and I\'m a bot created to say bong every hour in UTC! Ben aims to have commands that not a lot of bots have! You can also use --help [command] to get help on a specific command!')
+        .setDescription('Hi! My name is Ben and I\'m a bot created to say bong every hour in UTC! Ben aims to have commands that not a lot of bots have!\n\You can also use --help [command] to get help on a specific command!')
         .addField(`__Status:__`, `Online | Currently still in development` )
         .addField(`__Invite Link:__`, `https://goo.gl/rpihva`)
         .addField(`__Commands:__`, `My prefix is **--**\n\Use '--commands' to see a list of my commands.\n\You can find a list of my commands as of now here:\n https://hastebin.com/orocoquzeb.md `)
