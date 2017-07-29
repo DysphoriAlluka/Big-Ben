@@ -20,7 +20,7 @@ exports.run = async(client, message, Discord, args) => {
         let image = response[0].url;
         const embed = await new Discord.RichEmbed()
           .setAuthor(`${search}`, 'https://a.safe.moe/F3RvU.png')
-          .setColor(`FE8E46`)
+          .setColor(`#009925`)
           .setDescription(image)
           .setImage(image);
         message.delete();
