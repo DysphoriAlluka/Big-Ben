@@ -196,4 +196,14 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Usage:__`, `--nextbong`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
+    if(message.content.includes('commands')) { //commands
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Commands`, client.user.displayAvatarURL)
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Shows list of commands.` )
+        .addField(`__Usage:__`, `--commands`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
 }

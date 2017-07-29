@@ -76,7 +76,8 @@ client.on("message", message => {
   if (!message.content.startsWith(prefix)) return;
 
   //COMMAND Handler
-  const command = args.shift().slice(prefix.length);
+  const org = args.shift().slice(prefix.length);
+  const command = org.toLowerCase();
 
   try {
     let commandFile = require(`./commands/${command}.js`);

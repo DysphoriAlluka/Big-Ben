@@ -48,6 +48,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Usage:* wiki [query]
 
 ## Info
+### commands 
+*Description:* Shows list of commands.
+*Usage:* commands
 ### help  
 *Description:* Shows list of commands and gives basic information on the bot.
 *Usage:* help <command name> 
