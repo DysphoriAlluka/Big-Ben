@@ -156,4 +156,24 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Usage:__`, `--wiki [query]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
+    if(message.content.includes('deletthis')) { //deletes 2 messages
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Delet This`, client.user.displayAvatarURL)
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Category: Moderation | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Deletes the message sent before the command.` )
+        .addField(`__Usage:__`, `--deletthis`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('deletthese')) { //deletes 5 messages
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Delet These`, client.user.displayAvatarURL)
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Category: Moderation | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Deletes 4 messages sent before the command.` )
+        .addField(`__Usage:__`, `--deletthese`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
 }
