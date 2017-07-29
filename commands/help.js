@@ -8,7 +8,7 @@ exports.run = async (client, message, Discord, args) => {
         .setDescription('Hi! My name is Ben and I\'m a bot created to say bong every hour in UTC! Ben aims to have commands that not a lot of bots have! You can also use --help [command] to get help on a specific command!')
         .addField(`__Status:__`, `Online | Currently still in development` )
         .addField(`__Invite Link:__`, `https://goo.gl/rpihva`)
-        .addField(`__Commands:__`, `My prefix is **--**\n You can find a list of my commands as of now here:\n https://hastebin.com/cegokuwuji.md `)
+        .addField(`__Commands:__`, `My prefix is **--**\n You can find a list of my commands as of now here:\n https://hastebin.com/dahehehozu.md `)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\You can also join this server https://discord.gg/zE9ZSQz to be imprisoned until I get to you.\n\Or use --support [message] to send a support message.`)
         .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. Seeing it offline all the time was devastating, to say the least. Hence the creation of this bootleg, deepfried, Ben. All credits go to where it's due.`, true);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
@@ -22,16 +22,6 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Description:__`, `Talk to the bot using the cleverbot api.` )
         .addField(`__Usage:__`, `--! [sentence]`)
         .addField(`__Note:__`, `This command is limited to only 5000 usages per month, please do not spam it.`)
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('article')) { //article
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Article`, 'https://a.safe.moe/5zgOg.gif')
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Generates a random article.` )
-        .addField(`__Usage:__`, `--article`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('bing')) { //bing/ping
