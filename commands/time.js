@@ -5,7 +5,7 @@ const timeIs = 'https://time.is/'
 
 exports.run = async (client, message, args) => {
   const location = message.content.split(/\s+/g).slice(1).join(" ");
-
+  if(!location) return message.channel.send('Please specify a location for me to gather information from.')
   try {
     const res = await snekfetch.get(`${timeIs}${location}`)
     const text = res.text || res.body.toString()

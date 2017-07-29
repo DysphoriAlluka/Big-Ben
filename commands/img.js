@@ -5,6 +5,8 @@ exports.run = async(client, message, Discord, args) => {
 
   let search = args.join(" ");
 
+  if(!search) return message.channel.send('Please specify something to search.')
+
   if (search.length > 0) {
     try {
       const response = await gClient.search(search, {

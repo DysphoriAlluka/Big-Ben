@@ -7,7 +7,7 @@ exports.run = async(client, message, Discord, args) => {
       .setDescription(colour);
     message.channel.send({embed});
   } else {
-    let m = await message.channel.send(":warning: **Invalid Parameters!** :warning:");
+    let m = await message.channel.send("Invalid Parameters!");
     m.delete(2000);
   }
 };

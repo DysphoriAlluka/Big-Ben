@@ -15,7 +15,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('talk')) { //talk cleverbot
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Talk`, client.user.displayAvatarURL)
+        .setAuthor(`Talk`, 'https://a.safe.moe/S4jjl.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -26,7 +26,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('article')) { //article
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Article`, client.user.displayAvatarURL)
+        .setAuthor(`Article`, 'https://a.safe.moe/5zgOg.gif')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -36,7 +36,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('bing')) { //bing/ping
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Bing`, client.user.displayAvatarURL)
+        .setAuthor(`Bing`, 'https://a.safe.moe/okClI.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -46,7 +46,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('colour')) { //colour
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Colour`, client.user.displayAvatarURL)
+        .setAuthor(`Colour`, 'https://a.safe.moe/Yfolq.jpg')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -56,7 +56,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('img')) { //google image search
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Img/Image`, client.user.displayAvatarURL)
+        .setAuthor(`Img/Image`, 'https://a.safe.moe/F3RvU.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -78,7 +78,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('paragraph')) { //paragraph generator
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Paragraph`, client.user.displayAvatarURL)
+        .setAuthor(`Paragraph`, 'https://a.safe.moe/5zgOg.gif')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -108,7 +108,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('sentence')) { //sentence generator
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Sentence`, client.user.displayAvatarURL)
+        .setAuthor(`Sentence`, 'https://a.safe.moe/5zgOg.gif')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -128,7 +128,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('time')) { //time command
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Time`, client.user.displayAvatarURL)
+        .setAuthor(`Time`, 'https://a.safe.moe/jE3GJ.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -138,7 +138,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('weather')) { //weather command
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Weather`, client.user.displayAvatarURL)
+        .setAuthor(`Weather`, 'https://a.safe.moe/JPcx7.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
@@ -148,7 +148,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('wiki')) { //wikipedia command
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Wiki`, client.user.displayAvatarURL)
+        .setAuthor(`Wiki`, 'https://a.safe.moe/8GCNj.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
