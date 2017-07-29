@@ -24,8 +24,7 @@ client.on("ready", () => {
 //message and update when Ben joins or leaves a server
 client.on('guildCreate', guild =>{
 	var channel = client.channels.get(notifyChannel)
-	guild.defaultChannel.send(":wave:, I'm a bot created to say bong every hour in UTC! Please contact <@180050347589369856> if you have any issues with the bot.");
-			channel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
+		channel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 client.on('guildDelete', guild =>{
 		var channel = client.channels.get(notifyChannel)
