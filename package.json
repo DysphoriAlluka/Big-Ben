@@ -19,7 +19,8 @@
     "node-schedule": "^1.2.3",
     "moment": "^2.18.1",
     "snekfetch": "^3.2.4",
-    "txtgen": "^2.0.1"
+    "txtgen": "^2.0.1",
+    "wikijs": "^3.1.4"
   },
   "false": {}
 }
