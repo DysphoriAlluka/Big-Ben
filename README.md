@@ -31,6 +31,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Searches google images  
 *Usage:* img <search>  
 *Note:* This command is limied to only 100 searches per day, please do not spam it.
+### nextbong
+*Description:* Tells you how much longer till the next bong.
+*Usage:* nextbong
 ### time
 *Description:* Tells the date and time in a specific location.
 *Usage:* time [place]
