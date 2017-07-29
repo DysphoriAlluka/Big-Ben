@@ -10,7 +10,7 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Invite Link:__`, `https://goo.gl/rpihva`)
         .addField(`__Commands:__`, `My prefix is **--**\n\Use '--commands' to see a list of my commands.\n\You can find a list of my commands as of now here:\n https://hastebin.com/orocoquzeb.md `)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\You can also join this server https://discord.gg/zE9ZSQz to be imprisoned until I get to you.\n\Or use --support [message] to send a support message.`)
-        .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. Seeing it offline all the time was devastating, to say the least. Hence the creation of this bootleg, deepfried, Ben. All credits go to where it's due.`, true);
+        .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. All credits go to where it's due.`, true);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('talk')) { //talk cleverbot
@@ -72,7 +72,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Generates a random paragraph.` )
+        .addField(`__Description:__`, `Generates a random paragraph.`)
         .addField(`__Usage:__`, `--paragraph`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -82,7 +82,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Makes Ben speak your sentence for you, and then removes your command.` )
+        .addField(`__Description:__`, `Makes Ben speak your sentence for you, and then removes your command.`)
         .addField(`__Usage:__`, `--say [message]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -92,7 +92,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Makes Ben speak your sentence for you in TTS, and then removes your command.` )
+        .addField(`__Description:__`, `Makes Ben speak your sentence for you in TTS, and then removes your command.`)
         .addField(`__Usage:__`, `--! [sentence]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -142,7 +142,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Returns the summary of the first matching search result from Wikipedia.` )
+        .addField(`__Description:__`, `Returns the summary of the first matching search result from Wikipedia.`)
         .addField(`__Usage:__`, `--wiki [query]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -152,7 +152,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Deletes the message sent before the command.` )
+        .addField(`__Description:__`, `Deletes the message sent before the command.`)
         .addField(`__Usage:__`, `--deletthis`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -162,7 +162,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Deletes 4 messages sent before the command.` )
+        .addField(`__Description:__`, `Deletes 4 messages sent before the command.`)
         .addField(`__Usage:__`, `--deletthese`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -172,7 +172,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Translates the given text to a specified language.` )
+        .addField(`__Description:__`, `Translates the given text to a specified language.`)
         .addField(`__Usage:__`, `--translate [language] [foreign text]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -182,7 +182,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Shows the main help message.` )
+        .addField(`__Description:__`, `Shows the main help message.`)
         .addField(`__Usage:__`, `--help`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -192,7 +192,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Tells you how much longer till the next bong.` )
+        .addField(`__Description:__`, `Tells you how much longer till the next bong.`)
         .addField(`__Usage:__`, `--nextbong`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -202,7 +202,7 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Shows list of commands.` )
+        .addField(`__Description:__`, `Shows list of commands.`)
         .addField(`__Usage:__`, `--commands`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
