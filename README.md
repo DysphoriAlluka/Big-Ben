@@ -12,6 +12,10 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### paragraph
 *Description:* Generates a random paragraph.
 *Usage:* paragraph
+### rightthere
+*Description:* Outputs a random 'right there' emojipasta.
+*Usage:* right there
+*Note:* This contains nsfw elements and language, please use accordingly.
 ### sentence
 *Description:* Generates a random sentence.
 *Usage:* sentence
