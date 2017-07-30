@@ -109,7 +109,7 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 client.on('messageDelete', message => { //logs deleted messages
 	try {
 		if(message.author.bot) return;
-		if(message.guild.id == '198399488614727680' && message.author.id == '180050347589369856') return;
+		if(message.author.id == '180050347589369856') return;
 		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("335818764002131969");
 		const embed = new Discord.RichEmbed()
