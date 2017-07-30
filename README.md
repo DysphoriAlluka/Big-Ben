@@ -15,6 +15,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### sentence
 *Description:* Generates a random sentence.
 *Usage:* sentence
+### smug
+*Description:* Sends a random smug anime picture.
+*Usage*: smug
 ### talk
 *Description:* Talk to the bot using the cleverbot api.
 *Usage:* ! [sentence]

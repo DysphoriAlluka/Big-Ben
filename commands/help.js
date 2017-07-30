@@ -8,7 +8,7 @@ exports.run = async (client, message, Discord, args) => {
         .setDescription('A simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
         .addField(`__Status:__`, `Online | Currently still in development`, true)
         .addField(`__Invite Link:__`, `https://goo.gl/rpihva`, true)
-        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. https://hastebin.com/orocoquzeb.md `)
+        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. https://hastebin.com/baxowojebu.md`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
         .addField(`__This is a terrible bot:__`, `Me too thanks`)
         .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
@@ -205,6 +205,16 @@ exports.run = async (client, message, Discord, args) => {
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows list of commands.`)
         .addField(`__Usage:__`, `--commands`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('smug')) { //smug
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Smug`, 'http://smug.moe/smg/17.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Sends a random smug anime picture.`)
+        .addField(`__Usage:__`, `--smug`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
 }
