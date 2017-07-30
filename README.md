@@ -5,6 +5,12 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### there are unlisted, secret commands.
   
 ## Fun
+### 8ball
+*Description:* Ask the all-knowing 8ball a question.
+*Usage:* 8ball [question]  
+### cat
+*Description:* Shows a random picture of a cat. And who doesn't love cats?
+*Usage:* cat  
 ### insult  
 *Description:* Insults someone using the list of premade insults.
 *Usage:* insult  

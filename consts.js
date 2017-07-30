@@ -1,4 +1,4 @@
-exports.commandlink = ['https://hastebin.com/ufikesubud.md']
+exports.commandlink = ['https://hastebin.com/hizoqikota.md']
 
 //list of insults
 exports.insults = [

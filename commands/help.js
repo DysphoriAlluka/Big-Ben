@@ -228,4 +228,24 @@ exports.run = async (client, message, Discord, args) => {
         .addField(`__Note:__`, `This contains nsfw elements and language, please use accordingly.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
+    if(message.content.includes('cat')) { //random cat
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Cat`, 'http://random.cat/random.cat-logo.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Shows a random picture of a cat. And who doesn't love cats?`)
+        .addField(`__Usage:__`, `--cat`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('8ball')) { //8ball
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`8ball`, 'https://a.safe.moe/09Yuu.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Ask the all knowing 8ball a question.`)
+        .addField(`__Usage:__`, `--8ball [question]`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
 }
