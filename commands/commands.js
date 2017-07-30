@@ -1,7 +1,7 @@
 exports.run = async(client, message, Discord) => {
     const embed = new Discord.RichEmbed()
         .setAuthor(`Commands`, client.user.displayAvatarURL)
-        .setDescription(`There are unlisted, secret commands, use --help <commandname> for more details.\n\ ${client.consts.commandslink}`)
+        .setDescription(`There are unlisted, secret commands, use --help <commandname> for more details.\n\ ${client.consts.commandlink}`)
         .setColor('B6D6E7')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
