@@ -5,8 +5,8 @@ exports.run = async(client, message, Discord) => {
         .setColor('B6D6E7')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Fun:__`, `8ball, cat, insult, paragraph, rightthere, sentence, smug, talk`)
-        .addField(`__Utility:__`, `bing, colour, img, nextbong, time, translate, weather, wiki`)
         .addField(`__Info:__`, `commands, help, support`)
+        .addField(`__Utility:__`, `bing, colour, img, nextbong, time, translate, weather, wiki`)
+        .addField(`__Fun:__`, `8ball, cat, insult, paragraph, rightthere, sentence, smug, talk`)
     return message.channel.send({embed}).then(m=>m.react("⏲"))
 }
