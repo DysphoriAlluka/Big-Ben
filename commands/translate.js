@@ -1,5 +1,4 @@
 const translate = require('google-translate-api')
-const { stripIndents } = require('common-tags')
 
 exports.run = async (client, message, Discord, args) => {
 

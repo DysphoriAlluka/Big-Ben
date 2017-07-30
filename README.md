@@ -56,16 +56,10 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Insults someone using the list of premade insults.
 *Usage:* insult  
 *Note:* THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.
-### paragraph
-*Description:* Generates a random paragraph.
-*Usage:* paragraph
 ### rightthere
 *Description:* Outputs a random 'right there' emojipasta.
 *Usage:* right there
 *Note:* This contains nsfw elements and language, please use accordingly.
-### sentence
-*Description:* Generates a random sentence.
-*Usage:* sentence
 ### smug
 *Description:* Sends a random smug anime picture.
 *Usage*: smug
