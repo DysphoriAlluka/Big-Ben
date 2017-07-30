@@ -5,11 +5,11 @@ exports.run = async (client, message, Discord, args) => {
     	.setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
 	    .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .setDescription('Hi! My name is Ben and I\'m a bot created to say bong every hour in UTC! Ben aims to have commands that not a lot of bots have!\n\You can also use --help [command] to get help on a specific command!')
+        .setDescription('I\'m a simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes.\n\Stupid? Definitely.\n\Useful? Not so much.*')
         .addField(`__Status:__`, `Online | Currently still in development` )
         .addField(`__Invite Link:__`, `https://goo.gl/rpihva`)
-        .addField(`__Commands:__`, `My prefix is **--**\n\Use '--commands' to see a list of my commands.\n\You can find a list of my commands as of now here:\n https://hastebin.com/orocoquzeb.md `)
-        .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\You can also join this server https://discord.gg/zE9ZSQz to be imprisoned until I get to you.\n\Or use --support [message] to send a support message.`)
+        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.\n\https://hastebin.com/orocoquzeb.md `)
+        .addField(`__Support:__`, `Contact <@180050347589369856> for direct support. Or use --support [message] to send a support message.`)
         .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. All credits go to where it's due.`, true);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
