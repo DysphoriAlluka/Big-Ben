@@ -37,7 +37,7 @@ client.on("message", message => {
 	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
 	var feeshmain = client.channels.get('323639445842558977');//feesh
 		if(message.author.bot)return;
-		if(message.content.startsWith('//'))return message.react('🙊');
+		if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
 		if(message.content.startsWith('--'))return;
 			if(message.content.includes('<@329722471295221760>')){
 				message.reply("bong?");
