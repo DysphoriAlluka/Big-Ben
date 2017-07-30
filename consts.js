@@ -1,4 +1,4 @@
-exports.commandlink = ['https://hastebin.com/mofovomoha.md']
+exports.commandlink = ['https://hastebin.com/alojibelun.md']
 
 //list of insults
 exports.insults = [
@@ -116,7 +116,7 @@ exports.insults = [
   ' You\'re a fucking waste of my time and energy, cunt.',
   ' You look like you came straight out of the African wild.',
   ' You\'re disposable like the paper plates you eat off cause you can\'t afford anything else.',
-  ' My lungs are failing from inhaling all the charcoal from this circle of the hate and the lies.'
+  ' Your relationship status is as dry as your sense of morality.'
 ]
 
 //clocks for time command

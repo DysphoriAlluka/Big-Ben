@@ -41,6 +41,9 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 ### wiki
 *Description:* Returns the summary of the first matching search result from Wikipedia.
 *Usage:* wiki [query]
+### youtube
+*Description:* Searches for videos on YouTube.
+*Usage:* youtube [query]
 
 ## Fun
 ### 8ball

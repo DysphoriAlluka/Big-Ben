@@ -7,8 +7,8 @@ exports.run = async (client, message, Discord, args) => {
 	    .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
         .addField(`__Status:__`, `Online | Currently still in development`, true)
-        .addField(`__Invite Link:__`, `https://goo.gl/rpihva`, true)
-        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. ${client.consts.commandlink}`)
+        .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
+        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. [Command List](${client.consts.commandlink})`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
         .addField(`__This is a terrible bot:__`, `Me too thanks`)
         .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
@@ -246,6 +246,16 @@ exports.run = async (client, message, Discord, args) => {
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Ask the all knowing 8ball a question.`)
         .addField(`__Usage:__`, `--8ball [question]`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('youtube')) { //youtube
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`YouTube`, 'https://a.safe.moe/V3Dhb.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Searches for videos on YouTube.`)
+        .addField(`__Usage:__`, `--youtube [query]`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
 }
