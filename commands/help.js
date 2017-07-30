@@ -240,7 +240,7 @@ exports.run = async (client, message, Discord, args) => {
     }
     if(message.content.includes('8ball')) { //8ball
      const embed = new Discord.RichEmbed()
-        .setAuthor(`8ball`, 'https://a.safe.moe/09Yuu.png')
+        .setAuthor(`8ball`, 'https://a.safe.moe/aKDHV.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)

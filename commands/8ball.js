@@ -15,7 +15,7 @@ exports.run = async (client, message, Discord, args) => {
 
   const magic = res.body.magic
     const embed = new Discord.RichEmbed()
-        .setAuthor(question, 'https://a.safe.moe/09Yuu.png')
+        .setAuthor(question, 'https://a.safe.moe/aKDHV.png')
         .setDescription(magic.answer + '.')
         .setColor('#646770')
   return message.channel.send({embed})
