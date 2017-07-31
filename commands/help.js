@@ -1,4 +1,4 @@
-exports.run = async (client, message, Discord, args) => {
+exports.run = (client, message, Discord, args) => {
     if(message.content == '--help') { //base help
      const embed = new Discord.RichEmbed()
     	.setAuthor(`BigBen`, client.user.displayAvatarURL)

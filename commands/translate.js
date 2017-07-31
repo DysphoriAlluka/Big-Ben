@@ -1,6 +1,6 @@
 const translate = require('google-translate-api')
 
-exports.run = async (client, message, Discord, args) => {
+exports.run = (client, message, Discord, args) => {
 
   const lang = message.content.split(/\s+/g)[1]
   const input = message.content.split(/\s+/g).slice(2).join(" ");

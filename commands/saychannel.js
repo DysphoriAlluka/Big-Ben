@@ -1,4 +1,4 @@
-exports.run = async (client, message, Discord, args) => {
+exports.run = (client, message, Discord, args) => {
     if(message.author.id !== '180050347589369856') return message.channel.send(`Only the bot owner can use this command.`);
     if(message.guild.id !== '198399488614727680') return message.channel.send(`This command can only be used in Big Ben's server.`)
     try {

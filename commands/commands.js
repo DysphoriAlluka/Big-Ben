@@ -1,4 +1,4 @@
-exports.run = async(client, message, Discord) => {
+exports.run = (client, message, Discord) => {
     const embed = new Discord.RichEmbed()
         .setAuthor(`Commands`, client.user.displayAvatarURL)
         .setDescription(`Use --help <commandname> for more details.\n\ [Command List](${client.consts.commandlink})`)

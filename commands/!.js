@@ -1,4 +1,4 @@
-exports.run = async(client, message, Discord, args) => {
+exports.run = (client, message, Discord, args) => {
     var cleverbot = require("cleverbot-node");
     clbot = new cleverbot;
     clbot.configure({botapi: "CC30y25bSJBl1pLmgwxRZHmMUjA"});

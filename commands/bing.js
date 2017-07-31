@@ -1,4 +1,4 @@
-exports.run = async(client, message) => {
+exports.run = (client, message) => {
   message.channel.send('Bonging...').then(sent => {
     sent.edit(`Bong! Took ${sent.createdTimestamp - message.createdTimestamp}ms`)
   })

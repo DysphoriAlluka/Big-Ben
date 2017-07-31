@@ -1,3 +1,3 @@
-exports.run = async (client, message) => {
+exports.run = (client, message) => {
     message.channel.bulkDelete(2);
 }

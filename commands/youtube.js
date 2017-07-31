@@ -3,7 +3,7 @@ youtube = new youtube_node();
 youtube.setKey('AIzaSyAeSSAdGkMhfK_-jgJlYwP0pB6X6HgIqwA');
 youtube.addParam('type', 'video');
 
-exports.run = async (client, message, args) => {
+exports.run = (client, message, args) => {
     var query = message.content.split(/\s+/g).slice(1).join(" ");
 	youtube.search(query, 1, function(error, result) {
         if(!query) {
