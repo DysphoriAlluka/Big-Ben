@@ -6,9 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "engines": {
-    "node": "8.1.2"
-  },
   "author": "Mako#8739",
   "license": "ISC",
   "dependencies": {
