@@ -13,10 +13,14 @@ exports.run = async (client, message, Discord, args) => {
     message.channel.send('Could not retrieve answer from 8-ball!')
   }
 
+  try {
   const magic = res.body.magic
     const embed = new Discord.RichEmbed()
         .setAuthor(question, 'https://a.safe.moe/aKDHV.png')
         .setDescription(magic.answer + '.')
         .setColor('#646770')
   return message.channel.send({embed})
+  } catch(err) {
+    message.channel.send('The 8ball seems to be non-functional.')
+  }
 }

@@ -35,7 +35,7 @@ exports.run = async(client, message, Discord, args) => {
       console.error(err);
     }
   } else {
-    let m = await message.send(":warning: Invalid Parameters!");
+    let m = await message.send("Invalid Parameters(???)");
     m.delete(2000);
   }
 };

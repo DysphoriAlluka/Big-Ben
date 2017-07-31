@@ -122,9 +122,6 @@ exports.insults = [
 //clocks for time command
 exports.clocks = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚']
 
-//date formats
-exports.fullDateFormat = 'HH:mm:ss'
-
 exports.rightThere = [
   '🔊🔊🚨🚨WARNING🔊🚨🚨WARNING🚨🚨🔊THIS IS A 🐸DANK 👽MEME❗❗ 🐸ALERT. INCOMING 🐸DANK 👽MEME🐸 👐👌HEADING STRAIGHT 🚀🚀YOUR WAY. 🔜👆👆👆PLEASE TAKE ANY PRECAUTIONS🚧🚧 NECESSARY TO PREPARE YOURSELF FOR THIS 🐸DANK 👽MEME❗❗ 🐸 🌋🌋🌋 .BUCKLE UP♿♿♿ THEM SEATBELTS👮👮,PUT THEM CELLPHONES ON SILENT📵📵 AND LOOSEN THAT ANUS👅👅🍑🍑🍑🍩🍩💩💩 CUZ THIS MEME JUST CAME STRAIGHT OUT OF THE 🚬🚬 🍁🏭🍁🏭🍁🚬🚬DANK FACTORY.',
   '✋✋✋✋✋hol\' up hol\' up ✋✋ looks 👀 like we got a master 🎓 memer 🐸🐸🐸 over here 👈👈👈👩🏼👩🏼hold on to your 👙panties👙ladies!💋💁fuccbois better back the hell ⬆️up⬆️ this absolute 🙀🙀🙀 maaaaaadman!!1! 👹 all you other aspiring 🌽🌽 memers👽👻💀 mmmight as wwwell give up! 👎👎👎👎cuse 👉this guy👈is as good 👌👌👌as it gets! 👏👏👏😹😹',

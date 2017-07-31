@@ -4,14 +4,14 @@ exports.run = (client, message, Discord, args) => {
     	.setAuthor(`BigBen`, client.user.displayAvatarURL)
     	.setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
-	    .setFooter(`Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+	    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
         .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
         .addField(`__Status:__`, `Online | Currently still in development`, true)
         .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
         .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. [Command List](${client.consts.commandlink})`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
         .addField(`__This is a terrible bot:__`, `Me too thanks`)
-        .addField(`__Additional Info:__`, `This bot is based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
+        .addField(`__Additional Info:__`, `Based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('talk')) { //talk cleverbot

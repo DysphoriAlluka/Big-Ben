@@ -1,4 +1,3 @@
-//clientID = 329722471295221760
 //botURL = https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -38,32 +37,31 @@ client.on("message", message => {
 	var feeshmain = client.channels.get('323639445842558977');//feesh
 		if(message.author.bot)return;
 		if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
-		if(message.content.startsWith('--'))return;
-			if(message.content.includes('<@329722471295221760>')){
-				message.reply("bong?");
+		if(message.content.startsWith(prefix))return;
+			if(message.content.includes('<@329722471295221760>')) {
+				return message.reply("bong?");
 			};
-			if(message.content.includes('<@!329722471295221760>')){
-				if(message.content.includes('help'))return;
-				message.reply("bong?");
+			if(message.content.includes('<@!329722471295221760>')) {
+				return message.reply("bong?");
 			};
 			if(message.content.includes('bong')){
 				message.reply("bong?");
 			};
 				//vv announcements and insults, tied to homeguild
-					if(message.channel.id =='335764527176089610'){;
+					if(message.channel.id =='335764527176089610') {;
 						allpainnogainmain.send(message.content);
 					}
-					if(message.channel.id =='337007224134303747'){;
+					if(message.channel.id =='337007224134303747') {;
 						allpainnogainmain.send(`${client.consts.insults[Math.round(Math.random() * (client.consts.insults.length - 1))]}`);
 					}
-					if(message.channel.id =='337643020352749569'){;
+					if(message.channel.id =='337643020352749569') {;
 						let paragraph = txtgen.paragraph();
 							allpainnogainmain.send(paragraph);
 					}
-					if(message.channel.id =='337727000036769792'){;
+					if(message.channel.id =='337727000036769792') {;
 						allpainnogainprison.send(message.content);
 					}
-					if(message.channel.id =='335766194525044739'){;
+					if(message.channel.id =='335766194525044739') {;
 						feeshmain.send(message.content);
 					}
 }); 	
@@ -309,5 +307,3 @@ client.on('ready', () => {
 		client.guilds.map(guild => guild.defaultChannel.send("***BONG!***"));
 	})
 });
-
-
