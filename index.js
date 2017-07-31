@@ -21,6 +21,19 @@ client.on("ready", () => {
   channel.send(`Big Ben is up and running!`);
 });
 
+var express = require('express');
+var app = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
+
 //message and update when Ben joins or leaves a server
 client.on('guildCreate', guild =>{
 	var channel = client.channels.get(notifyChannel)
