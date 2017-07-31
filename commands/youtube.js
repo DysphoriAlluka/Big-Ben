@@ -3,7 +3,7 @@ youtube = new youtube_node();
 youtube.setKey('AIzaSyAeSSAdGkMhfK_-jgJlYwP0pB6X6HgIqwA');
 youtube.addParam('type', 'video');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     var query = message.content.split(/\s+/g).slice(1).join(" ");
 	youtube.search(query, 1, function(error, result) {
         if(!query) {
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
 				if (!result || !result.items || result.items.length < 1) {
 					return message.channel.send(`No results found for **${query}**`);
 				} else {
-					message.channel.send(`**${query}**(http://www.youtube.com/watch?v=${result.items[0].id.videoId})`);
+					message.channel.send(`<:youtubBwwWOWWwowwWOWwthanks:341350435312893953> **${query}**(http://www.youtube.com/watch?v=${result.items[0].id.videoId})`);
 				}
 			}
 		});
