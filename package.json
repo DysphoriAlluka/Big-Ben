@@ -1,6 +1,6 @@
 {
   "name": "BigBen",
-  "version": "2.5",
+  "version": "1.0",
   "description": "Bongs every full hour, written in discord.js",
   "main": "index.js",
   "scripts": {
