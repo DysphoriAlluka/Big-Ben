@@ -21,7 +21,7 @@ exports.run = function (client, message, Discord, args) {
             .addField(':sunrise: Sunrise', weatherinfo.astronomy.sunrise, true)
             .addField(':city_sunset: Sunset', weatherinfo.astronomy.sunset, true)
         message.channel.send({embed});       
-    })
+     })
     } catch(err) {
         message.channel.send(`Location \`${city}\` was not found!`)
     }
