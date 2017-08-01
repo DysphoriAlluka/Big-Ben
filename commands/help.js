@@ -21,7 +21,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Talk to the bot using the cleverbot api.` )
-        .addField(`__Usage:__`, `--! [sentence]`)
+        .addField(`__Usage:__`, "`--! [sentence]`")
         .addField(`__Note:__`, `This command is limited to only 5000 usages per month, please do not spam it.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -32,7 +32,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Pings the bot and gives the ms latency.` )
-        .addField(`__Usage:__`, `--bing`)
+        .addField(`__Usage:__`, "`--bing`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('colour')) { //colour
@@ -42,7 +42,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows preview for a given hex colour.` )
-        .addField(`__Usage:__`, `--colour [colour code]`)
+        .addField(`__Usage:__`, "`--colour [colour code]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('img')) { //google image search
@@ -52,7 +52,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Searches google images for your word or keyword.` )
-        .addField(`__Usage:__`, `--img [search tag or keyword]`)
+        .addField(`__Usage:__`, "`--img [search tag or keyword]`")
         .addField(`__Note:__`, `This command is limited to only 100 usages per day, please do not spam it.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -63,18 +63,8 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Insults someone using the list of premade insults.` )
-        .addField(`__Usage:__`, `--insult`)
+        .addField(`__Usage:__`, "`--insult`")
         .addField(`__Note:__`, `THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.`)
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('paragraph')) { //paragraph generator
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Paragraph`, 'https://a.safe.moe/5zgOg.gif')
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Generates a random paragraph.`)
-        .addField(`__Usage:__`, `--paragraph`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('say')) { //say
@@ -84,7 +74,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Makes Ben speak your sentence for you, and then removes your command.`)
-        .addField(`__Usage:__`, `--say [message]`)
+        .addField(`__Usage:__`, "`--say [message]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('saytts')) { //saytts
@@ -94,17 +84,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Makes Ben speak your sentence for you in TTS, and then removes your command.`)
-        .addField(`__Usage:__`, `--! [sentence]`)
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('sentence')) { //sentence generator
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Sentence`, 'https://a.safe.moe/5zgOg.gif')
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Generates a random sentence.` )
-        .addField(`__Usage:__`, `--sentence`)
+        .addField(`__Usage:__`, "`--! [sentence]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('support')) { //support message
@@ -114,7 +94,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Sends your message to the support server.` )
-        .addField(`__Usage:__`, `--support [questions, inquiries, feedback, issues, or bugs] <--dm>`)
+        .addField(`__Usage:__`, "`--support [questions, inquiries, feedback, issues, or bugs] <--dm>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('time')) { //time command
@@ -124,7 +104,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Tells the date and time in a specific location.` )
-        .addField(`__Usage:__`, `--time [location]`)
+        .addField(`__Usage:__`, "`--time [location]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('weather')) { //weather command
@@ -134,7 +114,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows detailed weather information for the given location.` )
-        .addField(`__Usage:__`, `--weather [location]`)
+        .addField(`__Usage:__`, "`--weather [location]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('wiki')) { //wikipedia command
@@ -144,7 +124,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Returns the summary of the first matching search result from Wikipedia.`)
-        .addField(`__Usage:__`, `--wiki [query]`)
+        .addField(`__Usage:__`, "`--wiki [query]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('deletthis')) { //deletes 2 messages
@@ -154,7 +134,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Deletes the message sent before the command.`)
-        .addField(`__Usage:__`, `--deletthis`)
+        .addField(`__Usage:__`, "`--deletthis`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('deletthese')) { //deletes 5 messages
@@ -163,8 +143,8 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Deletes 4 messages sent before the command.`)
-        .addField(`__Usage:__`, `--deletthese`)
+        .addField(`__Description:__`, `Deletes 5 messages sent before the command.`)
+        .addField(`__Usage:__`, "`--deletthese`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('translate')) { //translation
@@ -174,7 +154,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Translates the given text to a specified language.`)
-        .addField(`__Usage:__`, `--translate [language] [foreign text]`)
+        .addField(`__Usage:__`, "`--translate [language] [foreign text]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content == ('--help help')) { //help????help???
@@ -184,7 +164,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows the main help message.`)
-        .addField(`__Usage:__`, `--help`)
+        .addField(`__Usage:__`, "`--help`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('nextbong')) { //next bong
@@ -194,7 +174,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Tells you how much longer till the next bong.`)
-        .addField(`__Usage:__`, `--nextbong`)
+        .addField(`__Usage:__`, "`--nextbong`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('commands')) { //commands
@@ -204,7 +184,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Info | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows list of commands.`)
-        .addField(`__Usage:__`, `--commands`)
+        .addField(`__Usage:__`, "`--commands`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('smug')) { //smug
@@ -214,7 +194,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Sends a random smug anime picture.`)
-        .addField(`__Usage:__`, `--smug`)
+        .addField(`__Usage:__`, "`--smug`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('rightthere')) { //right there
@@ -224,7 +204,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Outputs a random 'right there' emojipasta.`)
-        .addField(`__Usage:__`, `--rightthere`)
+        .addField(`__Usage:__`, "`--rightthere`")
         .addField(`__Note:__`, `This contains nsfw elements and language, please use accordingly.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -235,7 +215,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Shows a random picture of a cat. And who doesn't love cats?`)
-        .addField(`__Usage:__`, `--cat`)
+        .addField(`__Usage:__`, "`--cat`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('8ball')) { //8ball
@@ -245,7 +225,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Ask the all knowing 8ball a question.`)
-        .addField(`__Usage:__`, `--8ball [question]`)
+        .addField(`__Usage:__`, "`--8ball [question]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('youtube')) { //youtube
@@ -255,7 +235,29 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Searches for videos on YouTube.`)
-        .addField(`__Usage:__`, `--youtube [query]`)
+        .addField(`__Usage:__`, "`--youtube [query]`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('danbooru')) { //danbooru search 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Danbooru`, 'https://a.safe.moe/OYVQe.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Searches for images on Danbooru.`)
+        .addField(`__Usage:__`, "`--danbooru [tags]`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('safebooru')) { //safebooru search 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Safebooru`, 'https://a.safe.moe/OYVQe.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Searches for images on Safebooru.`)
+        .addField(`__Usage:__`, "`--safebooru [tags]`")
+        .addField(`__Note:__`, `This command can be used in non-nsfw channels, but keep in mind Safebooru's definition of safe.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
 }

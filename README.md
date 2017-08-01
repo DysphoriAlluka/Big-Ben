@@ -67,3 +67,13 @@ Big Ben is a bot that bongs every hour in UTC and has some utilities. More comma
 *Description:* Talk to the bot using the cleverbot api.
 *Usage:* ! [sentence]
 *Note:* This command is limited to only 5000 usages per month, please do not spam it.
+
+## NSFW
+### danbooru
+*Description:* Searches for images on Danbooru. 
+*Usage:* danbooru [tags]
+*Note:* This command can only be used in NSFW channels.
+### safebooru
+*Description:* Searches for images on Safebooru
+*Usage:* safebooru [tags]
+*Note:* This command can be used in non-nsfw channels, but keep in mind Safebooru's definition of safe.

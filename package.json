@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "cleverbot-node": "^0.3.11",
+    "danbooru": "^2.0.3",
     "discord.js": "^11.1.0",
     "express": "^4.15.3",
     "google-images": "^2.1.0",
