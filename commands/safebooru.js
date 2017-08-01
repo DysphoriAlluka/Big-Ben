@@ -10,6 +10,6 @@ exports.run = async (client, message, Discord, args) => {
         if(!id) {
             return message.channel.send(`There were no results for **${query}**!`)
         }
-    return message.channel.send(":card_box: " + query + '\n' + `https://safebooru.org/index.php?page=post&s=view&id=${id}`)
+    return message.channel.send(":card_box: " + query + '\n' + `https://safebooru.donmai.us./posts/${id}`)
     })
 }
