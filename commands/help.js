@@ -10,7 +10,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
         .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
-        .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035766794256394>`)
+        .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342041926016434177>`)
         .addField(`__Additional Info:__`, `Based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
@@ -22,7 +22,7 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Talk to the bot using the cleverbot api.` )
         .addField(`__Usage:__`, "`--! [sentence]`")
-        .addField(`__Note:__`, `This command is limited to only 5000 usages per month, please do not spam it.`)
+        .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('bing')) { //bing/ping
@@ -41,8 +41,8 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Utility | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Shows preview for a given hex colour.` )
-        .addField(`__Usage:__`, "`--colour [colour code]`")
+        .addField(`__Description:__`, `Shows preview for a given hex colour, if none provided, a random colour will be generated.` )
+        .addField(`__Usage:__`, "`--colour <colour code>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('img')) { //google image search
@@ -135,16 +135,6 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Deletes the message sent before the command.`)
         .addField(`__Usage:__`, "`--deletthis`")
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('deletthese')) { //deletes 5 messages
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Delet These`, client.user.displayAvatarURL)
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Hidden | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Deletes 5 messages sent before the command.`)
-        .addField(`__Usage:__`, "`--deletthese`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('translate')) { //translation
@@ -290,6 +280,17 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Sends a random picture of boobs.`)
         .addField(`__Usage:__`, "`--boobs`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('hentaiirl')) { //reddit trash
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Hentai_Irl`, 'https://a.safe.moe/jZZKM.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Sends a random picture from r/hentai_irl.`)
+        .addField(`__Usage:__`, "`--hentaiirl`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
