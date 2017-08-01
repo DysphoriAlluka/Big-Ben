@@ -94,8 +94,7 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
 	.setTimestamp()
-	.setFooter(`Channel ID: ${oldMessage.channel.id} | Guild ID: ${oldMessage.guild.id}`)
-  	.addField(oldMessage.guild.name + ', ' + oldMessage.channel.name,
+  	.addField(`[${oldMessage.guild.name}](${oldMessage.guild.id}), [${oldMessage.channel.name}](${oldMessage.channel.id})`,
 		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
 	} catch(err) {
@@ -110,11 +109,10 @@ client.on('messageDelete', message => { //logs deleted messages
 		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("335818764002131969");
 		const embed = new Discord.RichEmbed()
- 	 .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
+ 	 .setAuthor(`[${message.member.user.tag}](${message.memeber.user.id})`, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
 	 .setTimestamp()
-	 .setFooter(`Channel ID: ${message.channel.id} | Guild ID: ${message.guild.id}`)
-	 .addField(message.guild.name + ', ' + message.channel.name,
+	 .addField(`[${message.guild.name}](${message.guild.id}), [${message.channel.name}](${message.channel.id})`,
 	    message )
  	chan.send({embed})
 	} catch(err) {
@@ -138,12 +136,12 @@ client.on('guildMemberAdd', member => {
   var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
-  .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+  .setAuthor(`[${member.user.tag}](${member.user.id})`, member.user.displayAvatarURL)
   .setColor('F0A38F')
-  .setFooter(`Big Ben sees all™ | ${guild.id}`)
+  .setFooter(`Big Ben sees all™`)
   .setTimestamp()
   .addField('User Update',
-    `${member.user}, has joined ` + guild )
+    `${member.user}, has joined [${guild}](${guild.id})`)
   channel.send({embed});
 });
 //server announcement for when someone leaves
@@ -151,12 +149,12 @@ client.on('guildMemberRemove', member => {
   var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
-  .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+  .setAuthor(`[${member.user.tag}](${member.user.id})`, member.user.displayAvatarURL)
   .setColor('7C7F86')
-  .setFooter(`Big Ben sees all™ | ${guild.id}`)
+  .setFooter(`Big Ben sees all™`)
   .setTimestamp()
   .addField('User update',
-    `${member.user} just left `+ guild)
+    `${member.user} just left [${guild}](${guild.id})`)
   channel.send({embed});
 });
 
