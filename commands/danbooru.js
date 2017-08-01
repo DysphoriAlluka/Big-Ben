@@ -11,6 +11,6 @@ exports.run = async (client, message, Discord, args) => {
         if(!id) {
             return message.channel.send(`There were no results for **${query}**!`)
         }
-    return message.channel.send(`https://safebooru.donmai.us./posts/${id}`)
+    return message.channel.send(`https://danbooru.donmai.us/posts/${id}`)
     })
 }
