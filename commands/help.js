@@ -298,8 +298,30 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Sends a random picture from selected meme subreddits.`)
+        .addField(`__Description:__`, `Have me bring you the best and freshest memes from selected meme subreddits.`)
         .addField(`__Usage:__`, "`--meme`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }  
+    if(message.content.includes('nsfwgif')) { //reddit trash
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`NSFW.gif`, 'https://a.safe.moe/O8TDd.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Returns an NSFW gif from [r/NSFW_GIF](https://www.reddit.com/r/NSFW_GIF/)`)
+        .addField(`__Usage:__`, "`--nsfwgif`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }  
+    if(message.content.includes('hentai')) { //reddit trash
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Hentai`, 'https://a.safe.moe/jZZKM.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Have me bring you the best and freshest hentai from selected hentai subreddits.`)
+        .addField(`__Usage:__`, "`--hentai`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } 
 }

@@ -1,13 +1,13 @@
 const randomPuppy = require('random-puppy')
 
 exports.run = (client, message, Discord) => {
-    var randSubreddit = client.consts.memeSubreddits[Math.round(Math.random() * (client.consts.memeSubreddits.length - 1))]
+    var randSubreddit = client.consts.hentaiSubreddits[Math.round(Math.random() * (client.consts.hentaiSubreddits.length - 1))]
     randomPuppy(randSubreddit)
         .then(url => {
             const embed = new Discord.RichEmbed()
                 .setAuthor(randSubreddit)
                 .setImage(url)
-                .setColor('#887064')
+                .setColor('#A187E0')
             message.channel.send({embed})
         })
 }

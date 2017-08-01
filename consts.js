@@ -120,7 +120,7 @@ exports.insults = [
 //clocks for time command
 exports.clocks = ['🕛', '🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚']
 
-exports.subreddits = [
+exports.memeSubreddits = [
   'memes',
   'DeepFriedMemes',
   'bonehurtingjuice',
@@ -128,6 +128,17 @@ exports.subreddits = [
   'dankmemes',
   'meirl',
   'me_irl'
+]
+
+exports.hentaiSubreddits = [
+  'hentai',
+  'hentiny',
+  'ecchi',
+  'rule34',
+  'HENTAI_GIF',
+  'doujinshi',
+  'yuri',
+  'thick_hentai'
 ]
 
 exports.rightThere = [
