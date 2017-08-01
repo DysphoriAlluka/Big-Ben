@@ -9,8 +9,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
         .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.`)
-        .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
-        .addField(`__Additional Info:__`, `Based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
+        .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('talk')) { //talk cleverbot
@@ -21,7 +20,7 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`Fun | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Talk to the bot using the cleverbot api.` )
         .addField(`__Usage:__`, "`--! [sentence]`")
-        .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`)
+        .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
     if(message.content.includes('bing')) { //bing/ping

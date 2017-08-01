@@ -93,8 +93,8 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 		const embed = new Discord.RichEmbed()
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
-	.setFooter(`[${oldMessage.guild.name}](${oldMessage.guild.id}), [${oldMessage.channel.name}](${oldMessage.channel.id})`)
-  	.addField(`\u200b`, "Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
+    .setFooter(`Guild: ${oldMessage.guild.id} | Channel: ${oldMessage.channel.id}`)
+  	.addField(`${oldMessage.guild.name}, ${oldMessage.channel.name}`, "Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel)
@@ -110,8 +110,8 @@ client.on('messageDelete', message => { //logs deleted messages
 		const embed = new Discord.RichEmbed()
  	 .setAuthor(message.member.user.tag, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
-     .setFooter(`[${message.guild.name}](${message.guild.id}), [${message.channel.name}](${message.channel.id})`)
-	 .addField(`\u200b`, message)
+     .setFooter(`Guild: ${message.guild.id} | Channel: ${message.channel.id}`)
+	 .addField(`${message.guild.name}, ${message.channel.name}`, message)
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel)
