@@ -6,11 +6,10 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
 	    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
         .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
-        .addField(`__Status:__`, `Online | Currently still in development`, true)
         .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
+        .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
-        .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`)
         .addField(`__Additional Info:__`, `Based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
