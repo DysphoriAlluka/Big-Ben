@@ -26,8 +26,8 @@ client.on('guildCreate', guild =>{
 		channel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 client.on('guildDelete', guild =>{
-		var channel = client.channels.get(notifyChannel)
-			channel.send(`Ben was removed from ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
+	var channel = client.channels.get(notifyChannel)
+		channel.send(`Ben was removed from ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 
 //message replies, commands, and announcements
@@ -93,9 +93,8 @@ client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
 		const embed = new Discord.RichEmbed()
   	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
   	.setColor('D1F2A5')
-	.setTimestamp()
-  	.addField(`[${oldMessage.guild.name}](${oldMessage.guild.id}), [${oldMessage.channel.name}](${oldMessage.channel.id})`,
-		"Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
+	.setFooter(`Guild: ${oldMessage.guild.id} | Channel: ${oldMessage.channel.id}`)
+  	.addField(`${oldMessage.guild.name}, ${oldMessage.channel.name}`, "Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel)
@@ -109,11 +108,10 @@ client.on('messageDelete', message => { //logs deleted messages
 		if(message.attachments.size > 0) return;
 		let chan = client.channels.get("335818764002131969");
 		const embed = new Discord.RichEmbed()
- 	 .setAuthor(`[${message.member.user.tag}](${message.memeber.user.id})`, message.member.user.displayAvatarURL)
+ 	 .setAuthor(message.member.user.tag, message.member.user.displayAvatarURL)
  	 .setColor('F56991')
-	 .setTimestamp()
-	 .addField(`[${message.guild.name}](${message.guild.id}), [${message.channel.name}](${message.channel.id})`,
-	    message )
+     .setFooter(`Guild: ${message.guild.id} | Channel: ${message.channel.id}`)
+	 .addField(`${message.guild.name}, ${message.channel.name}`, message)
  	chan.send({embed})
 	} catch(err) {
 		var channel = client.channels.get(notifyChannel)
@@ -136,7 +134,7 @@ client.on('guildMemberAdd', member => {
   var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
-  .setAuthor(`[${member.user.tag}](${member.user.id})`, member.user.displayAvatarURL)
+  .setAuthor(member.user.tag, member.user.displayAvatarURL)
   .setColor('F0A38F')
   .setFooter(`Big Ben sees all™`)
   .setTimestamp()
@@ -149,7 +147,7 @@ client.on('guildMemberRemove', member => {
   var channel = client.channels.get(notifyChannel)
   let guild = member.guild;
   const embed = new Discord.RichEmbed()
-  .setAuthor(`[${member.user.tag}](${member.user.id})`, member.user.displayAvatarURL)
+  .setAuthor(member.user.tag, member.user.displayAvatarURL)
   .setColor('7C7F86')
   .setFooter(`Big Ben sees all™`)
   .setTimestamp()
