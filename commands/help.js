@@ -266,7 +266,7 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Uses (nekos.life)[http://nekos.life/] to send you the best images of lewd nekos.`)
+        .addField(`__Description:__`, `Uses [nekos.life](http://nekos.life/) to send you the best images of lewd nekos.`)
         .addField(`__Usage:__`, "`--neko`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
