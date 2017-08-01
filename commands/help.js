@@ -289,7 +289,7 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Sends a random picture from r/hentai_irl.`)
+        .addField(`__Description:__`, `Sends a random picture from [r/hentai_irl](https://www.reddit.com/r/hentai_irl/).`)
         .addField(`__Usage:__`, "`--hentaiirl`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
