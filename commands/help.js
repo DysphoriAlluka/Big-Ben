@@ -8,7 +8,7 @@ exports.run = (client, message, Discord, args) => {
         .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
         .addField(`__Status:__`, `Online | Currently still in development`, true)
         .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
-        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command. [Command List](${client.consts.commandlink})`)
+        .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`)
         .addField(`__This is a terrible bot:__`, `Me too thanks`)
         .addField(`__Additional Info:__`, `Based purely on Voctor's original Big Ben bot. All credits go to where it's due.`);
@@ -258,6 +258,39 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Searches for images on Safebooru.`)
         .addField(`__Usage:__`, "`--safebooru [tags]`")
         .addField(`__Note:__`, `This command can be used in non-nsfw channels, but keep in mind Safebooru's definition of safe.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('neko')) { //lewd neko
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Neko`, 'https://a.safe.moe/3XYZ6.gif')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Uses (nekos.life)[http://nekos.life/] to send you the best images of lewd nekos.`)
+        .addField(`__Usage:__`, "`--neko`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('ass')) { //ass
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Ass`, 'https://a.safe.moe/cM3Vs.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Sends a random picture of ass. 'Ain't no playin' around, you just gotta get in there, and eat the whole ass, bruh.'`)
+        .addField(`__Usage:__`, "`--ass`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
+    if(message.content.includes('boobs')) { //boobs
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Boobs`, 'https://a.safe.moe/cM3Vs.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from the bot can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Sends a random picture of boobs.`)
+        .addField(`__Usage:__`, "`--boobs`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
 }
