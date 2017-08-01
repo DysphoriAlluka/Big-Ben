@@ -19,7 +19,6 @@
     "google-images": "^2.1.0",
     "google-translate-api": "^2.3.0",
     "got": "^7.1.0",
-    "kaori": "^1.0.9",
     "moment": "^2.18.1",
     "node-schedule": "^1.2.3",
     "random-hex": "^1.0.2",

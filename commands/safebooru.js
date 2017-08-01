@@ -1,7 +1,7 @@
 const Danbooru = require('danbooru')
 let booru = new Danbooru.Safebooru()
 
-exports.run = async (client, message, Discord, args) => {
+exports.run = async (client, message, args) => {
     var query = message.content.split(/\s+/g).slice(1).join(" ");
     message.channel.send(`Searching for **${query}** on Safebooru!`).then(m => m.delete(3000));
     booru.posts(query).then(async post => {
