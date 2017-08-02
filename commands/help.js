@@ -23,16 +23,6 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
-    if(message.content.includes('bing')) { //bing/ping
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Bing`, 'https://a.safe.moe/okClI.png')
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Utility | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Pings the bot and gives the ms latency.` )
-        .addField(`__Usage:__`, "`--bing`")
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
     if(message.content.includes('colour')) { //colour
      const embed = new Discord.RichEmbed()
         .setAuthor(`Colour`, 'https://a.safe.moe/Yfolq.jpg')
@@ -60,7 +50,7 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Insults someone using the list of premade insults.` )
+        .addField(`__Description:__`, `Insults someone using my list of premade insults.` )
         .addField(`__Usage:__`, "`--insult`")
         .addField(`__Note:__`, `THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
