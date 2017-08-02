@@ -7,6 +7,6 @@ exports.run = async (client, message, Discord) => {
     const preview = res.body.neko
         const embed = new Discord.RichEmbed()
             .setImage(preview)
-            .setColor('#D0D6E5')
+            .setColor('#A187E0')
     return message.channel.send({embed})
 }
