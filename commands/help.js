@@ -192,7 +192,7 @@ exports.run = (client, message, Discord, args) => {
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Shows a random picture of a cat. And who doesn't love cats?`)
+        .addField(`__Description:__`, `Shows a random picture of a cat. Who doesn't love cats?`)
         .addField(`__Usage:__`, "`--cat`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
