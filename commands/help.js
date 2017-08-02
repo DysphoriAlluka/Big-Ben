@@ -6,7 +6,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
 	    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
         .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
-        .addField(`__Invite Me!:__`, `[Invite Link](https://goo.gl/rpihva)`, true)
+        .addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         .addField(`__Commands:__`, `Use '--commands' to see a list of my commands.\n\You can also use --help [command] to get help on a specific command.`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use --support [message] to send a support message.`);
@@ -19,7 +19,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Talk to the bot using the cleverbot api.` )
-        .addField(`__Usage:__`, "`--! [sentence]`")
+        .addField(`__Usage:__`, "`--! [sentence]` | `--talk [sentence]`")
         .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }
