@@ -136,8 +136,6 @@ exports.hentaiSubreddits = [
   'ecchi',
   'rule34',
   'HENTAI_GIF',
-  'doujinshi',
-  'yuri',
   'thick_hentai'
 ]
 

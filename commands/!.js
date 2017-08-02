@@ -13,4 +13,4 @@ exports.run = (client, message, Discord, args) => {
         message.channel.stopTyping();
       }, Math.random() * (1 - 3) + 1 * 1000);
     });
-  }
+}
