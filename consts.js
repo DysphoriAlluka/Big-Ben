@@ -151,7 +151,6 @@ exports.nsfwGifSubreddits = [
   'nsfw_gifs',
   'porninfifteenseconds',
   '60FPSPorn',
-  'WatchItForThePlot'
 ]
 
 exports.rightThere = [
