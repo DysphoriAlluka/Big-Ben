@@ -2,7 +2,6 @@ const booru = require('booru');
 
 exports.run = (client, message, Discord, args) => {
      var query = message.content.split(/\s+/g).slice(1).join(" ");
-     message.channel.send(`Searching for **${query}** on Safebooru!`).then(m => m.delete(3000));
         booru.search('safebooru', [query], {limit: 1, random: true})
          .then(booru.commonfy)
          .then(images => {
@@ -21,4 +20,3 @@ exports.run = (client, message, Discord, args) => {
              }
          })
 }
-
