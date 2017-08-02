@@ -8,7 +8,7 @@ const notifyChannel = '198399488614727680'
 const prefix = '--'
 const ownerId = '180050347589369856'
 
-client.login(auth.token);
+client.login(process.env.TOKEN);
 
 console.log('Starting Big Ben!')
 //ready and game status, message ready to main server
