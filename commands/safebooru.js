@@ -7,9 +7,9 @@ exports.run = (client, message, Discord, args) => {
          .then(images => {
              for(let image of images) {
                  const embed = new Discord.RichEmbed()
-                    .setAuthor(query, 'https://a.safe.moe/ppHw0.png')
+                    .setAuthor(`Safebooru | ${query}`, 'https://a.safe.moe/ppHw0.png')
                     .setImage(image.common.file_url)
-                    .setColor('#e4d797')
+                    .setColor('#bb7539')
                  message.channel.send({embed})
              }
          }).catch(err => {
