@@ -19,5 +19,4 @@ exports.run = (client, message, Discord, args) => {
           .addField('Output', res.text)
     message.channel.send({embed});
   })
-
 }
