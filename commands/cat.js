@@ -6,7 +6,7 @@ exports.run = async (client, message, Discord) => {
 
     const embed = new Discord.RichEmbed()
         .setImage(image)
-        .setFooter('http://www.random.cat ©')
+        .setFooter('http://www.random.cat ©', 'https://a.safe.moe/6GDXu.png')
         .setColor('#71A3BE')
     message.channel.send({embed})
 }

@@ -188,7 +188,7 @@ exports.run = (client, message, Discord, args) => {
     }
     if(message.content.includes('cat')) { //random cat
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Cat`, 'http://random.cat/random.cat-logo.png')
+        .setAuthor(`Cat`, 'https://a.safe.moe/6GDXu.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
@@ -218,7 +218,7 @@ exports.run = (client, message, Discord, args) => {
     }
     if(message.content.includes('danbooru')) { //danbooru search 
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Danbooru`, 'https://a.safe.moe/OYVQe.png')
+        .setAuthor(`Danbooru`, 'https://a.safe.moe/ppHw0.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`NSFW - 2D | Any message from me can be removed by reacting with a ⏲ emoji.`)
@@ -229,7 +229,7 @@ exports.run = (client, message, Discord, args) => {
     }
     if(message.content.includes('safebooru')) { //safebooru search 
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Safebooru`, 'https://a.safe.moe/OYVQe.png')
+        .setAuthor(`Safebooru`, 'https://a.safe.moe/ppHw0.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`NSFW - 2D | Any message from me can be removed by reacting with a ⏲ emoji.`)
@@ -314,4 +314,15 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } 
+    if(message.content.includes('rule34')) { //rule34 search 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Rule34`, 'https://a.safe.moe/ppHw0.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW - 2D | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Searches for images on Rule34.`)
+        .addField(`__Usage:__`, "`--rule34 [tags]`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    }
 }
