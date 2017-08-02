@@ -6,7 +6,7 @@ exports.run = async (client, message, Discord) => {
     randomPuppy(randSubreddit)
        .then(url => {
             const embed = new Discord.RichEmbed()
-                .setAuthor('NSFW.gif', 'https://a.safe.moe/O8TDd.png')
+                .setFooter('NSFW.gif', 'https://a.safe.moe/O8TDd.png')
                 .setImage(url)
                 .setColor('#CEA0A6')
             return message.channel.send({embed})

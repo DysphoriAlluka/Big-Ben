@@ -6,7 +6,7 @@ exports.run = (client, message, Discord) => {
     randomPuppy(randSubreddit)
         .then(url => {
             const embed = new Discord.RichEmbed()
-                .setAuthor(randSubreddit)
+                .setFooter(`r/${randSubreddit}`)
                 .setImage(url)
                 .setColor('#A187E0')
             return message.channel.send({embed})

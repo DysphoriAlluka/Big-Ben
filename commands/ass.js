@@ -8,6 +8,7 @@ exports.run = async (client, message, Discord) => {
     const preview = res.body[0]["PREVIEW".toLowerCase()]
     const image = `http://media.obutts.ru/${preview}`
         const embed = new Discord.RichEmbed()
+            .setFooter('http://obutts.ru/')
             .setImage(image)
             .setColor('#CEA0A6')
     return message.channel.send({embed})

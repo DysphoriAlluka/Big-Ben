@@ -5,7 +5,7 @@ exports.run = async (client, message, Discord) => {
     randomPuppy('hentai_irl')
        .then(url => {
             const embed = new Discord.RichEmbed()
-                .setAuthor('Hentai_irl', 'https://a.safe.moe/jZZKM.png')
+                .setFooter('Hentai_irl', 'https://a.safe.moe/jZZKM.png')
                 .setImage(url)
                 .setColor('#A187E0')
             return message.channel.send({embed})

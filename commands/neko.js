@@ -8,5 +8,6 @@ exports.run = async (client, message, Discord) => {
         const embed = new Discord.RichEmbed()
             .setImage(preview)
             .setColor('#A187E0')
+            .setFooter('http://nekos.life', 'https://a.safe.moe/3XYZ6.gif')
     return message.channel.send({embed})
 }
