@@ -4,11 +4,11 @@ exports.run = function (client, message, Discord, args) {
     if(args.length < 1) {
         return message.channel.send('Please provide a location.');
     }
-    try {
         const city = message.content.split(/\s+/g).slice(1).join(" ");
         got(`https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22${city}%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys`)
         .then(resp => {
           let weatherinfo = JSON.parse(resp.body).query.results.channel;
+          if(!weatherinfo.location.city) return message.channel.send(`The city ${city} was not found!`).then(m => m.delete(5000));
           const embed = new Discord.RichEmbed()
             .setAuthor(weatherinfo.item.title)
             .setColor('DFA661')
@@ -20,9 +20,6 @@ exports.run = function (client, message, Discord, args) {
             .addField('\u200B', '\u200B', true)
             .addField(':sunrise: Sunrise', weatherinfo.astronomy.sunrise, true)
             .addField(':city_sunset: Sunset', weatherinfo.astronomy.sunset, true)
-        message.channel.send({embed});       
+        message.channel.send({embed});
      })
-    } catch(err) {
-        message.channel.send(`Location \`${city}\` was not found!`)
-    }
 };
