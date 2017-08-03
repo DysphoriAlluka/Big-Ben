@@ -1,18 +1,18 @@
 exports.run = (client, message, Discord, args) => {
+    var helpCommand = message.content.split(/\s+/g)[1]
     if(message.content == '--help') { //base help
      const embed = new Discord.RichEmbed()
     	.setAuthor(`BigBen`, client.user.displayAvatarURL)
     	.setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
 	    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
-        .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+        .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Currently still in development, constant updates.\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
         .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         .addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         .addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
         .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('talk')) { //talk cleverbot
+    } else if(helpCommand === ('talk')) { //talk cleverbot
      const embed = new Discord.RichEmbed()
         .setAuthor(`Talk`, 'https://a.safe.moe/S4jjl.png')
         .setColor('54719E')
@@ -22,8 +22,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--! [sentence]` | `--talk [sentence]`")
         .addField(`__Note:__`, `This command is limited to only 5000 usages, I will find a permanent alternative when this runs out.`);
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('colour')) { //colour
+    } else if(helpCommand === ('colour')) { //colour
      const embed = new Discord.RichEmbed()
         .setAuthor(`Colour`, 'https://a.safe.moe/Yfolq.jpg')
         .setColor('54719E')
@@ -32,8 +31,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Shows preview for a given hex colour, if none provided, a random colour will be generated.` )
         .addField(`__Usage:__`, "`--colour <colour code>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('img')) { //google image search
+    } else if(helpCommand === ('img')) { //google image search
      const embed = new Discord.RichEmbed()
         .setAuthor(`Img/Image`, 'https://a.safe.moe/F3RvU.png')
         .setColor('54719E')
@@ -43,8 +41,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--img [search tag or keyword]`")
         .addField(`__Note:__`, `This command is limited to only 100 usages per day, please do not spam it.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('insult')) { //insults
+    } else if(helpCommand === ('insult')) { //insults
      const embed = new Discord.RichEmbed()
         .setAuthor(`Insult`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -54,8 +51,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--insult`")
         .addField(`__Note:__`, `THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('say')) { //say
+    } else if(helpCommand === ('say')) { //say
      const embed = new Discord.RichEmbed()
         .setAuthor(`Say`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -64,8 +60,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Makes Ben speak your sentence for you, and then removes your command.`)
         .addField(`__Usage:__`, "`--say [message]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('saytts')) { //saytts
+    } else if(helpCommand === ('saytts')) { //saytts
      const embed = new Discord.RichEmbed()
         .setAuthor(`SayTTS`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -74,8 +69,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Makes Ben speak your sentence for you in TTS, and then removes your command.`)
         .addField(`__Usage:__`, "`--! [sentence]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('support')) { //support message
+    } else if(helpCommand === ('support')) { //support message
      const embed = new Discord.RichEmbed()
         .setAuthor(`Support`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -84,8 +78,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Sends your message to the support server.` )
         .addField(`__Usage:__`, "`--support [questions, inquiries, feedback, issues, or bugs] <--dm>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('time')) { //time command
+    } else if(helpCommand === ('time')) { //time command
      const embed = new Discord.RichEmbed()
         .setAuthor(`Time`, 'https://a.safe.moe/jE3GJ.png')
         .setColor('54719E')
@@ -94,8 +87,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Tells the date and time in a specific location.` )
         .addField(`__Usage:__`, "`--time [location]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('weather')) { //weather command
+    } else if(helpCommand === ('weather')) { //weather command
      const embed = new Discord.RichEmbed()
         .setAuthor(`Weather`, 'https://a.safe.moe/JPcx7.png')
         .setColor('54719E')
@@ -104,8 +96,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Shows detailed weather information for the given location.` )
         .addField(`__Usage:__`, "`--weather [location]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('wiki')) { //wikipedia command
+    } else if(helpCommand === ('wiki')) { //wikipedia command
      const embed = new Discord.RichEmbed()
         .setAuthor(`Wiki`, 'https://a.safe.moe/8GCNj.png')
         .setColor('54719E')
@@ -114,8 +105,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Returns the summary of the first matching search result from Wikipedia.`)
         .addField(`__Usage:__`, "`--wiki [query]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('deletthis')) { //deletes 2 messages
+    } else if(helpCommand === ('deletthis')) { //deletes 2 messages
      const embed = new Discord.RichEmbed()
         .setAuthor(`Delet This`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -124,8 +114,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Deletes the message sent before the command.`)
         .addField(`__Usage:__`, "`--deletthis`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('translate')) { //translation
+    } else if(helpCommand === ('translate')) { //translation
      const embed = new Discord.RichEmbed()
         .setAuthor(`Translate`, 'https://a.safe.moe/2jXgX.png')
         .setColor('54719E')
@@ -134,8 +123,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Translates the given text to a specified language.`)
         .addField(`__Usage:__`, "`--translate [language] [foreign text]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content == ('--help help')) { //help????help???
+    } else if(message.content == ('--help help')) { //help????help???
      const embed = new Discord.RichEmbed()
         .setAuthor(`Help`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -144,8 +132,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Shows the main help message.`)
         .addField(`__Usage:__`, "`--help`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('nextbong')) { //next bong
+    } else if(helpCommand === ('nextbong')) { //next bong
      const embed = new Discord.RichEmbed()
         .setAuthor(`Next Bong`, 'https://a.safe.moe/jE3GJ.png')
         .setColor('54719E')
@@ -154,8 +141,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Tells you how much longer till the next bong.`)
         .addField(`__Usage:__`, "`--nextbong`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('commands')) { //commands
+    } else if(helpCommand === ('commands')) { //commands
      const embed = new Discord.RichEmbed()
         .setAuthor(`Commands`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -164,8 +150,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Shows list of commands.`)
         .addField(`__Usage:__`, "`--commands`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('smug')) { //smug
+    } else if(helpCommand === ('smug')) { //smug
      const embed = new Discord.RichEmbed()
         .setAuthor(`Smug`, 'http://smug.moe/smg/17.png')
         .setColor('54719E')
@@ -174,8 +159,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Sends a random smug anime picture.`)
         .addField(`__Usage:__`, "`--smug`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('rightthere')) { //right there
+    } else if(helpCommand === ('rightthere')) { //right there
      const embed = new Discord.RichEmbed()
         .setAuthor(`Right There`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -185,8 +169,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--rightthere`")
         .addField(`__Note:__`, `This contains nsfw elements and language, please use accordingly.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('cat')) { //random cat
+    } else if(helpCommand === ('cat')) { //random cat
      const embed = new Discord.RichEmbed()
         .setAuthor(`Cat`, 'https://a.safe.moe/6GDXu.png')
         .setColor('54719E')
@@ -195,8 +178,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Shows a random picture of a cat. Who doesn't love cats?`)
         .addField(`__Usage:__`, "`--cat`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('8ball')) { //8ball
+    } else if(helpCommand === ('8ball')) { //8ball
      const embed = new Discord.RichEmbed()
         .setAuthor(`8ball`, 'https://a.safe.moe/aKDHV.png')
         .setColor('54719E')
@@ -205,8 +187,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Ask the all knowing 8ball a question.`)
         .addField(`__Usage:__`, "`--8ball [question]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('youtube')) { //youtube
+    } else if(helpCommand === ('youtube')) { //youtube
      const embed = new Discord.RichEmbed()
         .setAuthor(`YouTube`, 'https://a.safe.moe/V3Dhb.png')
         .setColor('54719E')
@@ -215,8 +196,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Searches for videos on YouTube.`)
         .addField(`__Usage:__`, "`--youtube [query]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('danbooru')) { //danbooru search 
+    } else if(helpCommand === ('danbooru')) { //danbooru search 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Danbooru`, 'https://a.safe.moe/ppHw0.png')
         .setColor('54719E')
@@ -226,8 +206,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--danbooru [tags]`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('safebooru')) { //safebooru search 
+    } else if(helpCommand === ('safebooru')) { //safebooru search 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Safebooru`, 'https://a.safe.moe/ppHw0.png')
         .setColor('54719E')
@@ -237,8 +216,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--safebooru [tags]`")
         .addField(`__Note:__`, `This command can be used in non-nsfw channels, but keep in mind Safebooru's definition of safe.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('neko')) { //lewd neko
+    } else if(helpCommand === ('neko')) { //lewd neko
      const embed = new Discord.RichEmbed()
         .setAuthor(`Neko`, 'https://a.safe.moe/3XYZ6.gif')
         .setColor('54719E')
@@ -248,8 +226,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--neko`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('ass')) { //ass
+    } else if(helpCommand === ('ass')) { //ass
      const embed = new Discord.RichEmbed()
         .setAuthor(`Ass`, 'https://a.safe.moe/cM3Vs.png')
         .setColor('54719E')
@@ -259,8 +236,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--ass`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('boobs')) { //boobs
+    } else if(helpCommand === ('boobs')) { //boobs
      const embed = new Discord.RichEmbed()
         .setAuthor(`Boobs`, 'https://a.safe.moe/cM3Vs.png')
         .setColor('54719E')
@@ -270,8 +246,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--boobs`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('hentaiirl')) { //reddit trash
+    } else if(helpCommand === ('hentaiirl')) { //reddit trash
      const embed = new Discord.RichEmbed()
         .setAuthor(`Hentai_Irl`, 'https://a.safe.moe/jZZKM.png')
         .setColor('54719E')
@@ -281,8 +256,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--hentaiirl`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('meme')) { //reddit trash
+    } else if(helpCommand === ('meme')) { //reddit trash
      const embed = new Discord.RichEmbed()
         .setAuthor(`Meme`, client.user.displayAvatarURL)
         .setColor('54719E')
@@ -291,8 +265,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Have me bring you the best and freshest memes from selected meme subreddits.`)
         .addField(`__Usage:__`, "`--meme`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }  
-    if(message.content.includes('nsfwgif')) { //reddit trash
+    } else if(helpCommand === ('nsfwgif')) { //reddit trash
      const embed = new Discord.RichEmbed()
         .setAuthor(`NSFW.gif`, 'https://a.safe.moe/O8TDd.png')
         .setColor('54719E')
@@ -302,8 +275,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--nsfwgif`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }  
-    if(message.content.includes('hentai')) { //reddit trash
+    } else if(helpCommand === ('hentai')) { //reddit trash
      const embed = new Discord.RichEmbed()
         .setAuthor(`Hentai`, 'https://a.safe.moe/jZZKM.png')
         .setColor('54719E')
@@ -313,8 +285,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--hentai`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } 
-    if(message.content.includes('rule34')) { //rule34 search 
+    } else if(helpCommand === ('rule34')) { //rule34 search 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Rule34`, 'https://a.safe.moe/ppHw0.png')
         .setColor('54719E')
@@ -324,8 +295,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--rule34 [tags]`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }
-    if(message.content.includes('nsfw')) { //reddit trash
+    } else if(helpCommand === ('nsfw')) { //reddit trash
      const embed = new Discord.RichEmbed()
         .setAuthor(`NSFW`, 'https://a.safe.moe/cM3Vs.png')
         .setColor('54719E')
@@ -335,8 +305,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--nsfw`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    }  
-    if(message.content.includes('shut')) { //SHUT YESs 
+    } else if(helpCommand === ('shut')) { //SHUT YESs 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Shut`, 'https://a.safe.moe/WYu0x.png')
         .setColor('54719E')
@@ -345,5 +314,17 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `SHUT.`)
         .addField(`__Usage:__`, "`--shut`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } 
+    } else {
+        const embed = new Discord.RichEmbed()
+    	    .setAuthor(`BigBen`, client.user.displayAvatarURL)
+    	    .setColor('54719E')
+            .setThumbnail(client.user.displayAvatarURL)
+	        .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
+            .setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Currently still in development, constant updates.\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+            .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
+            .addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
+            .addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
+            .addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        return message.channel.send(`The command **${helpCommand}** was not found!`, {embed}).then(m=>m.react("⏲"))
+    }
 }

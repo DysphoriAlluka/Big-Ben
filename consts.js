@@ -277,5 +277,7 @@ exports.shut = [
   'https://cdn.discordapp.com/attachments/209083390366842880/342466981598855168/u_should_stop.png',
   'https://cdn.discordapp.com/attachments/209083390366842880/342470875754528769/dandy.png',
   'https://cdn.discordapp.com/attachments/209083390366842880/342472544152190976/wow_wtf.png',
-  'https://cdn.discordapp.com/attachments/209083390366842880/342474755389259797/why_have_you_forsaken_me.png'
+  'https://cdn.discordapp.com/attachments/209083390366842880/342474755389259797/why_have_you_forsaken_me.png',
+  'https://cdn.discordapp.com/attachments/209083390366842880/342490747678883840/why_me.png',
+  'https://cdn.discordapp.com/attachments/209083390366842880/342496483595255809/unknown.png'
 ]

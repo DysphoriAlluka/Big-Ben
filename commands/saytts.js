@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
 	let sayttsMessage = message.content.split(/\s+/g).slice(1).join(" ");
 	if(!sayttsMessage) return message.channel.send('Please specify something for me to send.')
  	    message.delete().catch(O_o=>{})
