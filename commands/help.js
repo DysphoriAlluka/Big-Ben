@@ -316,7 +316,7 @@ exports.run = (client, message, Discord, args) => {
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else if(helpCommand === ('byemom')) { 
      const embed = new Discord.RichEmbed()
-        .setAuthor(`Byemom`, 'https://a.safe.moe/h0JMI.png')
+        .setAuthor(`ByeMom`, 'https://a.safe.moe/h0JMI.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
