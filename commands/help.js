@@ -361,11 +361,11 @@ exports.run = (client, message, Discord, args) => {
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else if(helpCommand === ('f')) { 
      const embed = new Discord.RichEmbed()
-        .setAuthor(`F`, 'https://a.safe.moe/TGUHH.png')
+        .setAuthor(`F to Pay Respects`, 'https://a.safe.moe/TGUHH.png')
         .setColor('54719E')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Pays your respects. :pray:`)
+        .addField(`__Description:__`, `Better pay up your respects.`)
         .addField(`__Usage:__`, "`--f`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
