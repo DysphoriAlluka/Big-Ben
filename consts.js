@@ -125,7 +125,8 @@ exports.memeSubreddits = [
   'surrealmemes',
   'dankmemes',
   'meirl',
-  'me_irl'
+  'me_irl',
+  'funny'
 ]
 
 exports.hentaiSubreddits = [
