@@ -295,7 +295,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--rule34 [tags]`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } else if(helpCommand === ('nsfw')) { //reddit trash
+    } else if(helpCommand === ('nsfw')) { 
      const embed = new Discord.RichEmbed()
         .setAuthor(`NSFW`, 'https://a.safe.moe/cM3Vs.png')
         .setColor('54719E')
@@ -305,7 +305,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--nsfw`")
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } else if(helpCommand === ('shut')) { //SHUT YESs 
+    } else if(helpCommand === ('shut')) { 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Shut`, 'https://a.safe.moe/WYu0x.png')
         .setColor('54719E')
@@ -313,6 +313,42 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `SHUT.`)
         .addField(`__Usage:__`, "`--shut`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('byemom')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Byemom`, 'https://a.safe.moe/h0JMI.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `What are you gonna do when mom's gone?`)
+        .addField(`__Usage:__`, "`--byemom [search]`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('shit')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Shit`, 'https://a.safe.moe/h0JMI.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Ugh, I stepped in what now?`)
+        .addField(`__Usage:__`, "`--shit [whatever's on the bottom of your foot]`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('spank')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Spank`, 'https://a.safe.moe/h0JMI.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `GET SPANKED!!!!`)
+        .addField(`__Usage:__`, "`--spank <mention>`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('triggered')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Triggered`, 'https://a.safe.moe/h0JMI.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Old, stank meme. Is this still relevant?`)
+        .addField(`__Usage:__`, "`--triggered <mention>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()

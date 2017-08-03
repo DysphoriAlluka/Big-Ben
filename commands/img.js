@@ -5,7 +5,7 @@ exports.run = async(client, message, Discord, args) => {
 
   let search = args.join(" ");
 
-  if(!search) return message.channel.send('Please specify something to search.')
+  if(!search) return message.channel.send('Please specify something to search.').then(m => m.delete(3000));
 
   if (search.length > 0) {
     try {
@@ -21,7 +21,6 @@ exports.run = async(client, message, Discord, args) => {
         const embed = await new Discord.RichEmbed()
           .setAuthor(`${search}`, 'https://a.safe.moe/F3RvU.png')
           .setColor(`#3369E8`)
-          .setDescription(image)
           .setImage(image);
         message.delete();
         message.channel.send("", {
