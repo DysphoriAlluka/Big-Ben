@@ -18,7 +18,7 @@ exports.run = async function (client, message, Discord, args) {
 	}
 
 	const text = args
-	const mom = await Jimp.read('./assets/images/shit.jpg')
+	const shit = await Jimp.read('./assets/images/shit.jpg')
 	const blank = await Jimp.read('./assets/images/Empty.png')
 
 	const font = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK)
@@ -27,8 +27,8 @@ exports.run = async function (client, message, Discord, args) {
 	const search = blank.print(font, 0, 0, text, 350)
 	search.rotate(310)
 
-	mom.composite(search, 195, 585)
-	mom.getBuffer(Jimp.MIME_PNG, async(err, buffer) => {
+	shit.composite(search, 195, 585)
+	shit.getBuffer(Jimp.MIME_PNG, async(err, buffer) => {
 		try {
 			await message.channel.send({
 				files: [{
