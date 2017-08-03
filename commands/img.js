@@ -5,7 +5,7 @@ exports.run = async(client, message, Discord, args) => {
 
   let search = args.join(" ");
 
-  if(!search) return message.channel.send('Please specify something to search.').then(m => m.delete(3000));
+  if(!search) return message.channel.send('Please specify something to search.').then(m => m.delete(5000));
 
   if (search.length > 0) {
     try {

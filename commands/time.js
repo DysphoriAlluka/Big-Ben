@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
     const tMoment = moment(`${date} ${time}`)
     return message.channel.send(`${clock} The date and time in '${place}' is ${tMoment}.`)
   } catch (err) {
-    message.channel.send(`Location \`${location}\` was not found!`);
+    message.channel.send(`Location \`${location}\` was not found!`).then(m => m.delete(5000));
     console.log(err);
   } 
 }

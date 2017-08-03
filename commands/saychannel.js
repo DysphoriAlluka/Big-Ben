@@ -9,6 +9,6 @@ exports.run = (client, message, Discord, args) => {
             channel.send(channelMessage);
             message.channel.send('Message sent successfully.')
     } catch(err) {
-      message.channel.send(`There was an error sending your message. Invalid parameters.`)
+      message.channel.send(`There was an error sending your message. Invalid parameters.`).then(m => m.delete(3000));
     }
 }

@@ -350,6 +350,15 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Old, stank meme. Is this still relevant?`)
         .addField(`__Usage:__`, "`--triggered <mention>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('kaomoji')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Kaomoji`, 'https://a.safe.moe/lttoB.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Sends a random kaomoji.`)
+        .addField(`__Usage:__`, "`--kaomoji`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()
     	    .setAuthor(`BigBen`, client.user.displayAvatarURL)

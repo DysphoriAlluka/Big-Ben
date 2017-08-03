@@ -6,7 +6,7 @@ exports.run = async (client, message, Discord, args) => {
   const query = message.content.split(/\s+/g).slice(1).join(" ");
 
   if (!query) {
-    return message.channel.send('You must specify something to search!')
+    return message.channel.send('You must specify something to search!').then(m => m.delete(5000));
   }
 
   message.channel.send(`Searching for ${query} on Wikipedia...`).then(m => m.delete(3000));

@@ -6,7 +6,7 @@ exports.run = (client, message, Discord, args) => {
   const input = message.content.split(/\s+/g).slice(2).join(" ");
 
   if (!lang) {
-    message.channel.send('You must provide a language and some text to translate!')
+    return message.channel.send('You must provide a language and some text to translate!').then(m => m.delete(5000));
   }
 
   translate(input, {to: lang}).then(res => {

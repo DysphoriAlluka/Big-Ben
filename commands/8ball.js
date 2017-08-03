@@ -21,6 +21,6 @@ exports.run = async (client, message, Discord, args) => {
         .setColor('#646770')
   return message.channel.send({embed})
   } catch(err) {
-    message.channel.send('The 8ball seems to be non-functional.')
+    message.channel.send('The 8ball seems to be non-functional.').then(m => m.delete(3000));
   }
 }

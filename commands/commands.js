@@ -8,7 +8,7 @@ exports.run = (client, message, Discord) => {
         .addField("__Info:__", "`commands` `help` `nextbong` `support`")
         .addField("__Utility:__", "`colour` `time` `translate` `weather`", true)
         .addField("__Search:__", "`img` `wiki` `youtube`", true)
-        .addField("__Fun:__", "`8ball` `cat` `insult` `meme` `rightthere` `shut` `smug` `talk`")
+        .addField("__Fun:__", "`8ball` `cat` `insult` `kaomoji` `meme` `rightthere` `shut` `smug` `talk`")
         .addField("__Memes:__", "`byemom` `shit` `spank` `triggered`")
         .addField("__NSFW:__", "**2D** `danbooru` `hentai` `hentaiirl` `neko` `rule34` `safebooru`\n\**3D** `ass` `boobs` `nsfw` `nsfwgif`")
     return message.channel.send({embed}).then(m=>m.react("⏲"))

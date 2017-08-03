@@ -47,6 +47,9 @@ client.on("message", message => {
 			if(message.content.includes('bong')){
 				message.reply("bong?");
 			};
+			if(message.content.includes('press f')){
+				message.react('🇫');
+			};
 				//vv announcements and insults, tied to homeguild
 					if(message.channel.id =='335764527176089610') {;
 						allpainnogainmain.send(message.content);
