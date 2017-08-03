@@ -54,7 +54,7 @@ exports.insults = [
   ' Inbred fucking degenerates always shitting on everything.',
   ' Don\'t be fucking me, cause bet your ass you\'re hearing it.',
   ' I hate it when inbreds think they\'re the shit.',
-  ' Closed fist, fucking mad nigger throwing fits with your fat old tits.',
+  ' Closed fists, fucking mad nigger throwing fits with your fat old tits.',
   ' I\'m motherfucking pink on the top of my dick but when I smack it on ya girl\'s lips she gon\' be sick.',
   ' Suck my dick, faggot, you don\'t know me.',
   ' You ain\'t shit, you fucking bigot.',
