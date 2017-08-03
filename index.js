@@ -127,7 +127,7 @@ client.on('messageDelete', message => { //logs deleted messages
 client.on("messageReactionAdd", (messageReaction, user) => {
 	if(messageReaction.message.author.id !== '329722471295221760') return;
 	if(user.bot) return;
-	if(messageReaction.message.emoji('⏲')) {
+	if(messageReaction.message.emoji == '⏲') {
         messageReaction.message.delete();
       }
 })
