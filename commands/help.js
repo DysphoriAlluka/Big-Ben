@@ -336,4 +336,14 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     }  
+    if(message.content.includes('shut')) { //SHUT YESs 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Shut`, 'https://a.safe.moe/WYu0x.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `SHUT.`)
+        .addField(`__Usage:__`, "`--shut`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } 
 }

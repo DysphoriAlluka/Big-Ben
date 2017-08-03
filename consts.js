@@ -259,3 +259,21 @@ exports.rightThere = [
   '💝👰💝👰💝👰💝👰💝👰 waifu shit waiFu sHit 💝thats ✨ some kawaii💝💝shit right💝💝there 💝💝💝right✨there ✨✨if i do ƽaү so my self💐  i say so💐  thats what im posting about right there right there (chorus: ˢʰᵉ ᵃ ᶜᵘᵗᵉ) deSsSS💐💝💝UUuUUᴜᴜuUUᴜᴜUUᴜᴜuᴜᴜᴜᵤᵤᵤᵤᵤᵤᵘᵘᵘᵘᵘuᵘᵘ💝💝💝💝💐 💝👰💝👰👰👰Waifu shit',
   '⛵💕⛵💕⛵💕⛵💕⛵💕 cute boat cute bOat💕 thats 💖one cute💕💕boat right💕💕th 💕 ere💕💕💕right💖there 💖💖if i do ƽaү so my selｆ 💋 i say so 💋 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ) mMMMMᎷМ💋 💕💕💕НO0ОଠＯOOＯOОଠଠOoooᵒᵒᵒᵒᵒᵒᵒᵒ💕💕💕 💋 💕 ⛵⛵⛵💕💕Cute boat'
 ];
+
+exports.shut = [
+  'https://a.safe.moe/L0jNu.png',
+  'https://a.safe.moe/jXe9P.png',
+  'https://a.safe.moe/KHtvL.png',
+  'https://a.safe.moe/TaK8A.png',
+  'https://a.safe.moe/7eo5S.png',
+  'https://a.safe.moe/XWmmV.png',
+  'https://a.safe.moe/ipH36.png',
+  'https://a.safe.moe/J3YFg.png',
+  'https://a.safe.moe/YoLc6.png',
+  'https://a.safe.moe/wDqgf.png',
+  'https://a.safe.moe/UIWr1.png',
+  'https://a.safe.moe/cDzUr.png',
+  'https://cdn.discordapp.com/attachments/209083390366842880/342466969204686858/aw_nuts_.png',
+  'https://cdn.discordapp.com/attachments/209083390366842880/342466981598855168/u_should_stop.png',
+  'https://cdn.discordapp.com/attachments/209083390366842880/342470875754528769/dandy.png'
+]
