@@ -35,9 +35,6 @@ client.on("message", message => {
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
 	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
 	var feeshmain = client.channels.get('323639445842558977');//
-		if(message.author.id = '174627027956137985') {
-			return message.delete().catch(O_o=>{}); 
-		}
 		if(message.author.bot)return;
 		if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
 		if(message.content.startsWith(prefix))return;
