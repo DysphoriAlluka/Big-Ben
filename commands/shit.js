@@ -2,7 +2,7 @@ const Jimp = require('jimp')
 
 exports.run = async function (client, message, Discord, args) {
 	if (!message.channel.permissionsFor(client.user.id).has('ATTACH_FILES')) {
-		return message.reply('Aw heck, I can\'t attach messages!').then(m => m.delete(5000));
+		return message.reply('I can\'t attach messages!').then(m => m.delete(5000));
 	}
 
 	if (message.mentions.users.size > 0) {

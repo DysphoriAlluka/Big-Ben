@@ -8,7 +8,7 @@ const options = {
 
 exports.run = async function (client, message, Discord, args) {
 	if (!message.channel.permissionsFor(client.user.id).has('ATTACH_FILES')) {
-		return message.reply('Aw heck, I can\'t attach messages!').then(m => m.delete(5000));
+		return message.reply('I can\'t attach messages!').then(m => m.delete(5000));
 	}
 
 	let avatarurl = (message.mentions.users.size > 0 ? message.mentions.users.first().displayAvatarURL : message.author.displayAvatarURL).replace('gif', 'png')
