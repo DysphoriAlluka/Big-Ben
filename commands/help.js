@@ -359,6 +359,15 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Sends a random kaomoji.`)
         .addField(`__Usage:__`, "`--kaomoji`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('f')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`F`, 'https://a.safe.moe/TGUHH.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Pays your respects. :pray:`)
+        .addField(`__Usage:__`, "`--f`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()
     	    .setAuthor(`BigBen`, client.user.displayAvatarURL)
