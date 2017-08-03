@@ -22,7 +22,6 @@ exports.run = async(client, message, Discord, args) => {
           .setAuthor(`${search}`, 'https://a.safe.moe/F3RvU.png')
           .setColor(`#3369E8`)
           .setImage(image);
-        message.delete();
         message.channel.send("", {
           embed
         });
