@@ -18,8 +18,8 @@ exports.run = async function (client, message, Discord, args) {
 
 	const base = new Jimp(options.size, options.size)
 	const avatar = await Jimp.read(avatarurl)
-	const text = await Jimp.read('./assets/images/triggered.jpg')
-	const tint = await Jimp.read('./assets/images/red.png')
+	const text = await Jimp.read('./assets/images//triggered/triggered.jpg')
+	const tint = await Jimp.read('./assets/images/triggered/red.png')
 
 	avatar.resize(320, 320)
 	tint.scaleToFit(base.bitmap.width, base.bitmap.height)
