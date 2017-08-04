@@ -377,7 +377,7 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Searches Urban Dictionary for your word or keyword.` )
         .addField(`__Usage:__`, "`--urban [search tag or keyword]`")
         .addField(`__Note:__`, `If left blank, it will return a random definition.`);
-    } else if(helpCommand === ('Shits')) { 
+    } else if(helpCommand === ('shits')) { 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Shits`, 'https://a.safe.moe/h0JMI.png')
         .setColor('54719E')
