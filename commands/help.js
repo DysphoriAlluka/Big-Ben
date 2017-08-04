@@ -368,6 +368,15 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Better pay up your respects.`)
         .addField(`__Usage:__`, "`--f`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('urban')) { //google image search
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Urban`, 'https://a.safe.moe/1fscn.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Search | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Searches Urban Dictionary for your word or keyword.` )
+        .addField(`__Usage:__`, "`--urban [search tag or keyword]`")
+        .addField(`__Note:__`, `If left blank, it will return a random definition.`);
     } else {
         const embed = new Discord.RichEmbed()
     	    .setAuthor(`BigBen`, client.user.displayAvatarURL)
