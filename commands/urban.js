@@ -27,7 +27,7 @@ exports.run = async (client, message, Discord, args) => {
   }
 
   const resultMessage = query.length > 0
-    ? `Search result of \`${query}\` on Urban Dictionary:`
+    ? `First result for \`${query}\` on Urban Dictionary:`
     : `Random definition on Urban Dictionary:`
 
     const embed = new Discord.RichEmbed()
