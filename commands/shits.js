@@ -10,7 +10,7 @@ exports.run = async function (client, message, Discord, args) {
 	}
 
 	const text = message.content.split(/\s+/g).slice(1).join(" ");
-    const shits = await Jimp.read('./assets/images/shits.png')
+    const shits = await Jimp.read('./assets/images/SHITS.png')
     const blank = await Jimp.read('./assets/images/blank.png')
 
     const font = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK)
