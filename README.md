@@ -66,5 +66,5 @@ This bot is written to run on node.js. Please see https://nodejs.org/en/download
 
 Once you have nodejs installed, open a powershell inside the folder, and run `npm install`, this should install all the required dependencies to run the bot.
 
-###### And most importantly: ily dad <3
+###### ily dad <3
 
