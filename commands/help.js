@@ -348,7 +348,7 @@ exports.run = (client, message, Discord, args) => {
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `Better pay up your respects.`)
-        .addField(`__Usage:__`, "`--f`")
+        .addField(`__Usage:__`, "`--f <what you're paying respects to>`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else if(helpCommand === ('urban')) { //google image search
      const embed = new Discord.RichEmbed()
