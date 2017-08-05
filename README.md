@@ -55,6 +55,15 @@ A: Down syndrome is nothing to joke about you should be ashamed
 ##### This bot is useless what a hecking joke
 A: Me too thanks
 
+## Contributing
+##### Please help me make Ben better I am desperate
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
 ## Want to Run it Yourself?
 Read through the code and figure out where to input the token.
 
