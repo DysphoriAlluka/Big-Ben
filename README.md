@@ -30,7 +30,7 @@ Use `--support [queries, issues, bugs]` to send me a support message! Guaranteed
     - time, translate, weather, and much more to come.
 - **Search**
     - search for items on Google Images, YouTube, Wikipedia, and Urban Dictionary
-- Fun commands! Spice up your Discord server with cats, memes, emojipasta, and derogatory name-calling! ~~Not to mention the *smug anime faces.*~~
+- **Fun** commands! Spice up your Discord server with cats, memes, emojipasta, and derogatory name-calling! ~~Not to mention the *smug anime faces.*~~
 - **MEMES**
     - using the ~~new~~ *image manupulation* technology you can create the best, *stankest*, memes from the most overused templates!
         - Want to call something terrible? You've got it! Want bonzi to tell an amazing fact? Done! Want to google something after Mom leaves the household? Not an issue!
