@@ -40,20 +40,20 @@ Use `--support [queries, issues, bugs]` to send me a support message! Guaranteed
 
 ## FAQ
 ##### Who am I kidding no one asks me questions
-`Q:` What is this sstupid bot??
-`A:` He’s my son and I love him despite him being very retarded. In other words he just provides some dumbass functions and bongs every hour 
+###### What is this sstupid bot??
+A: He’s my son and I love him despite him being very retarded. In other words he just provides some dumbass functions and bongs every hour 
 
-`Q:` This is a terrible bot why did you make this
-`A:` Me too thanks
+###### This is a terrible bot why did you make this
+A: Me too thanks
 
-`Q:` Commands are not working! What do I do??
-`A:` Shut up I’m probably working on it
+###### Commands are not working! What do I do??
+A: Shut up I’m probably working on it
 
-`Q:` The bot is down!!!!
-`A:` Down syndrome is nothing to joke about you should be ashamed
+###### The bot is down!!!!
+A: Down syndrome is nothing to joke about you should be ashamed
 
-`Q:` This bot is useless what a hecking joke
-`A:` Me too thanks
+###### This bot is useless what a hecking joke
+A: Me too thanks
 
 ## Want to Run it Yourself?
 Read through the code and figure out where to input the token.
