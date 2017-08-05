@@ -15,7 +15,7 @@ exports.run = async function (client, message, Discord, args) {
     const font = await Jimp.loadFont(Jimp.FONT_SANS_64_BLACK)
     
     plsshut.resize(200, 200)
-	plsshut.print(font, 37, 60, 'SHUT', 225)
+	plsshut.print(font, 37, 60, 'shut', 225)
 
 	plsshut.getBuffer(Jimp.MIME_PNG, async (err, buffer) => {
 		try {

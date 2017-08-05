@@ -332,15 +332,6 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `Ugh, I stepped in what now?`)
         .addField(`__Usage:__`, "`--shit [whatever's on the bottom of your foot]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } else if(helpCommand === ('spank')) { 
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Spank`, 'https://a.safe.moe/h0JMI.png')
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `GET SPANKED!!!!`)
-        .addField(`__Usage:__`, "`--spank <mention>`")
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else if(helpCommand === ('triggered')) { 
      const embed = new Discord.RichEmbed()
         .setAuthor(`Triggered`, 'https://a.safe.moe/h0JMI.png')

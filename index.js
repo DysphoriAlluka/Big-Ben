@@ -45,10 +45,10 @@ client.on("message", message => {
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
-			if(message.content.includes('that') && ('like button')) {
+			if(message.content.includes('that') && message.content.includes('like button')) {
 				message.react('👍');
 			}
-			if(message.content.includes('THAT') && ('LIKE BUTTON')) {
+			if(message.content.includes('THAT') && message.content.includes('LIKE BUTTON')) {
 				message.react('👍');
 			}
 			if(message.content == '<@329722471295221760> help') {
