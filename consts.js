@@ -282,5 +282,6 @@ exports.shut = [
   'https://cdn.discordapp.com/attachments/209083390366842880/342490747678883840/why_me.png',
   'https://cdn.discordapp.com/attachments/209083390366842880/342496483595255809/unknown.png',
   'https://cdn.discordapp.com/attachments/323639445842558977/342759680852099083/me.png',
-  'https://cdn.discordapp.com/attachments/209083390366842880/343240278909386752/unknown.png'
+  'https://cdn.discordapp.com/attachments/209083390366842880/343240278909386752/unknown.png',
+  'https://cdn.discordapp.com/attachments/323639445842558977/342449624923242516/unknown.png'
 ]

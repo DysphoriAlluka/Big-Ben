@@ -10,20 +10,20 @@ exports.run = async function (client, message, Discord, args) {
 	}
 
 	const text = message.content.split(/\s+/g).slice(1).join(" ");
-    const retarded = await Jimp.read('./assets/images/retarded.png')
+    const bonzi = await Jimp.read('./assets/images/bonzi.png')
     const blank = await Jimp.read('./assets/images/blank.png')
 
-    const font = await Jimp.loadFont(Jimp.FONT_SANS_16_BLACK)
-    
-	blank.resize(225, 45)
-	const search = blank.print(font, 0, 0, text, 225)
+	const font = await Jimp.loadFont(Jimp.FONT_SANS_16_BLACK)
 
-    retarded.composite(search, 295, 5)
-	retarded.getBuffer(Jimp.MIME_PNG, async (err, buffer) => {
+	blank.resize(175, 120)
+	const fact = blank.print(font, 0, 0, text, 175)
+
+	bonzi.composite(fact, 23, 12)
+	bonzi.getBuffer(Jimp.MIME_PNG, async (err, buffer) => {
 		try {
 			await message.channel.send({
 				files: [{
-					name: 'retarded.png',
+					name: 'bonzi.png',
 					attachment: buffer
 				}]
 			})
