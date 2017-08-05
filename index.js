@@ -16,7 +16,7 @@ client.on("ready", () => {
   var channel = client.channels.get(notifyChannel);
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setGame("hey what's up you guys Ben here back at it again with the degeneracy smash that mf like button and don't forget to '--commands'");
+  client.user.setGame("press '--f' to pay respects.");
   channel.send(`Big Ben is up and running!`);
 });
 
