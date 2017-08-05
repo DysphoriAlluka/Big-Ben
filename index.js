@@ -38,35 +38,65 @@ client.on("message", message => {
 		if(message.author.bot)return;
 		if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
 		if(message.content.startsWith(prefix))return;
-			if(message.content.includes('<@329722471295221760>')) {
-				return message.reply("bong?");
-			};
-			if(message.content.includes('<@!329722471295221760>')) {
-				return message.reply("bong?");
-			};
-			if(message.content.includes('bong')){
-				message.reply("bong?");
-			};
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
+			if(message.content == '<@329722471295221760> help') {
+				const embed = new Discord.RichEmbed()
+					.setAuthor(`BigBen`, client.user.displayAvatarURL)
+    				.setColor('54719E')
+       				.setThumbnail(client.user.displayAvatarURL)
+				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
+        			.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Don\'t want the bongs? Mute me from your default channel!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
+        			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
+        			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
+        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+     			return message.channel.send({embed}).then(m=>m.react("⏲"))
+			}
+			if(message.content == '<@!329722471295221760> help') {
+				const embed = new Discord.RichEmbed()
+					.setAuthor(`BigBen`, client.user.displayAvatarURL)
+    				.setColor('54719E')
+       				.setThumbnail(client.user.displayAvatarURL)
+				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
+        			.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Don\'t want the bongs? Mute me from your default channel!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
+        			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
+        			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
+        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+     			return message.channel.send({embed}).then(m=>m.react("⏲"))
+			}
 				//vv announcements and insults, tied to homeguild
 					if(message.channel.id =='335764527176089610') {;
-						allpainnogainmain.send(message.content);
+						return allpainnogainmain.send(message.content);
 					}
 					if(message.channel.id =='337007224134303747') {;
-						allpainnogainmain.send(`${client.consts.insults[Math.round(Math.random() * (client.consts.insults.length - 1))]}`);
+						return allpainnogainmain.send(`${client.consts.insults[Math.round(Math.random() * (client.consts.insults.length - 1))]}`);
 					}
 					if(message.channel.id =='337643020352749569') {;
 						let paragraph = txtgen.paragraph();
-							allpainnogainmain.send(paragraph);
+							return allpainnogainmain.send(paragraph);
 					}
 					if(message.channel.id =='337727000036769792') {;
-						allpainnogainprison.send(message.content);
+						return allpainnogainprison.send(message.content);
 					}
 					if(message.channel.id =='335766194525044739') {;
-						feeshmain.send(message.content);
+						return feeshmain.send(message.content);
 					}
+					if(message.content.includes('<@329722471295221760>')) {
+						return message.reply("bong?");
+					};
+					if(message.content.includes('<@!329722471295221760>')) {
+						return message.reply("bong?");
+					};
+					if(message.content.includes('bong')){
+						return message.reply("bong?");
+					};
+					if(message.content.includes('BONG')) {
+						return message.reply('bong?')
+					}
+
 }); 	
 
 //command handler
