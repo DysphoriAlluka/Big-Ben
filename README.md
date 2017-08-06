@@ -1,17 +1,9 @@
 <p style="text-align:center;">
 <img src="http://i.imgur.com/8sK4dJR.png"></p>
 
-# Big Ben: The Sadistically Defective Discord Bot
+# Big Ben: The Sadistically Defective Discord Bot & I KNOW IT'S OPEN SOURCED BUT YOU CAN'T USE THIS I'LL SUE
+#### I am not joking this code is 100% private and I'm poor i can't afford private repos 🙏
 ## About
-A simple, small, and multipurpose bot whose main functionality is to bong every full hour. 
-
-Alerts you the time, essentially, not that you can't do that. 
-
-Written in [discord.js](https://github.com/hydrabolt/discord.js), shockingly easy to add your own commands and modules.
-
-Ben is very 'me-oriented', in the sense that it gives me, the owner, multiple advantages over others. It contains my user ID, IDs of people that I want to quarantine <3, and uhh that's about it for now.
-I also logs messages that have been deleted or edited. Don't like it? w/e. 
-
 ### About the "Developer"
 I go by the alias of Mako, I'm a nolife kid whose lifeline is the Internet. Still a student, intro-level *'programmer'*. 
 
@@ -36,7 +28,7 @@ Use `--support [queries, issues, bugs]` to send me a support message! Guaranteed
 - **Fun** commands! Spice up your Discord server with cats, memes, emojipasta, and derogatory name-calling! ~~Not to mention the *smug anime faces.*~~
 - **Memes**
     - using the new *image manupulation* technology you can create the best, *stankest*, memes from the most overused templates!
-- ***NSFW COMMANDS***
+- **NSFW COMMANDS**
     - NSFW commands for both 2D and 3D lovers alike! Hentai, nekos, Danbooru and Safebooru!
     - And as for those who prefer the tainted 3D females, ass, boobs, nsfw, and nsfwGif!!
 - And much more to come, stay tuned. 
@@ -68,15 +60,7 @@ A: Me too thanks
 5. Submit a pull request
 
 ## Want to Run it Yourself?
-Read through the code and figure out where to input the token, I'll give some vage ideas but absolutely no hand-holding around here no homo.
-
-My YouTube API key is free to use, there are limits on it that would prove *very* difficult to go over. 
-
-The Google CSE APIs are currently public as well, if things get out of hand, I will have to hide that. 
-#### I run this off Heroku, but here's a vague idea of how you can get it running:
-This bot is written to run off node.js. Please see https://nodejs.org/en/download/ 
-
-Once you have nodejs installed, open a powershell inside the folder, and run `npm install`, this should install all the required dependencies to run the bot.
+#### NOPLEASE
 
 ###### ily dad <3
 
