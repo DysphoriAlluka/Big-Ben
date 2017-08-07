@@ -422,6 +422,15 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `You gotta know when to shut.`)
         .addField(`__Usage:__`, "`--shut [mention | image URL]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('emojify')) { 
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`Emojify`, client.user.displayAvatarURL)
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Adds sume dumb emojis to your message.`)
+        .addField(`__Usage:__`, "`--emojify [message]`")
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()
     	    .setAuthor(`BigBen`, client.user.displayAvatarURL)

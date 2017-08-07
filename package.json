@@ -12,6 +12,7 @@
   "author": "Mako#8739",
   "license": "ISC",
   "dependencies": {
+    "@gaikema/emojify": "^1.0.2",
     "booru": "^0.3.3",
     "cleverbot-node": "^0.3.11",
     "discord.js": "^11.1.0",
