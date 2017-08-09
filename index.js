@@ -16,7 +16,7 @@ client.on("ready", () => {
   var channel = client.channels.get(notifyChannel);
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setGame("real ben is UP, no more bongs from me :\" )");
+  client.user.setGame("--help");
   channel.send(`Big Ben is up and running!`);
 });
 
@@ -202,7 +202,7 @@ client.on('guildMemberRemove', member => {
   channel.send({embed});
 });
 
-/*
+
 //big ben base, bongs every hour in utc
 client.on('ready', () => {
 
@@ -350,4 +350,3 @@ client.on('ready', () => {
 		client.guilds.map(guild => guild.defaultChannel.send("***BONG!***"));
 	})
 });
-*/
