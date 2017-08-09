@@ -412,6 +412,16 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Description:__`, `You gotta know when to shut.`)
         .addField(`__Usage:__`, "`--shut [mention | image URL]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
+    } else if(helpCommand === ('nsfwcommands')) { //ass
+     const embed = new Discord.RichEmbed()
+        .setAuthor(`NSFW COMMANDS`, 'https://a.safe.moe/cM3Vs.png')
+        .setColor('54719E')
+        .setThumbnail(client.user.displayAvatarURL)
+        .setFooter(`NSFW | Any message from me can be removed by reacting with a ⏲ emoji.`)
+        .addField(`__Description:__`, `Lists the avaliable NSFW commands`)
+        .addField(`__Usage:__`, "`--nsfwcommands`")
+        .addField(`__Note:__`, `This command can only be used in NSFW channels.`)
+     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()
     	    .setAuthor(`BigBen`, client.user.displayAvatarURL)
