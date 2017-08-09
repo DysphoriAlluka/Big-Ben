@@ -41,16 +41,6 @@ exports.run = (client, message, Discord, args) => {
         .addField(`__Usage:__`, "`--img [search tag or keyword]`")
         .addField(`__Note:__`, `This command is limited to only 100 usages per day, please do not spam it.`)
      return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } else if(helpCommand === ('insult')) { //insults
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Insult`, client.user.displayAvatarURL)
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Insults someone using my list of premade insults.` )
-        .addField(`__Usage:__`, "`--insult`")
-        .addField(`__Note:__`, `THIS COMMAND IS VERY OFFENSIVE, USE AT YOUR OWN RISK.`)
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else if(helpCommand === ('say')) { //say
      const embed = new Discord.RichEmbed()
         .setAuthor(`Say`, client.user.displayAvatarURL)
@@ -421,15 +411,6 @@ exports.run = (client, message, Discord, args) => {
         .setFooter(`Memes | Any message from me can be removed by reacting with a ⏲ emoji.`)
         .addField(`__Description:__`, `You gotta know when to shut.`)
         .addField(`__Usage:__`, "`--shut [mention | image URL]`")
-     return message.channel.send({embed}).then(m=>m.react("⏲"))
-    } else if(helpCommand === ('emojify')) { 
-     const embed = new Discord.RichEmbed()
-        .setAuthor(`Emojify`, client.user.displayAvatarURL)
-        .setColor('54719E')
-        .setThumbnail(client.user.displayAvatarURL)
-        .setFooter(`Fun | Any message from me can be removed by reacting with a ⏲ emoji.`)
-        .addField(`__Description:__`, `Adds sume dumb emojis to your message.`)
-        .addField(`__Usage:__`, "`--emojify [message]`")
      return message.channel.send({embed}).then(m=>m.react("⏲"))
     } else {
         const embed = new Discord.RichEmbed()
