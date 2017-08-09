@@ -1,7 +1,7 @@
 exports.run = (client, message, Discord) => {
     const embed = new Discord.RichEmbed()
         .setAuthor("Commands", client.user.displayAvatarURL)
-        .setDescription(`Use --help <commandname> for more details.`)
+        .setDescription(`Use \`--help <commandname>\` for more details.`)
         .setColor('B6D6E7')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter("Any message from me can be removed by reacting with a ⏲ emoji.")
