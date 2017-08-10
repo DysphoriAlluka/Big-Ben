@@ -132,42 +132,6 @@ client.on("message", message => {
   }
 });
 
-//logs given messages 
-client.on('messageUpdate', (oldMessage, newMessage) => { //logs message updates
-	try {
-		if(oldMessage.author.bot) return;
-		if(oldMessage.guild.id == '198399488614727680' && oldMessage.author.id == '180050347589369856') return;
-		if(oldMessage.attachments.size > 0) return;
-    	let chan = client.channels.get("335784491425726474");
-		const embed = new Discord.RichEmbed()
-  	.setAuthor(`${oldMessage.member.user.tag}`, oldMessage.member.user.displayAvatarURL)
-  	.setColor('D1F2A5')
-    .setFooter(`Guild: ${oldMessage.guild.id} | Channel: ${oldMessage.channel.id}`)
-  	.addField(`${oldMessage.guild.name}, ${oldMessage.channel.name}`, "Old:   " +  oldMessage + '' + '\n' + "New: " + '' + newMessage + '' );
- 	chan.send({embed})
-	} catch(err) {
-		var channel = client.channels.get(notifyChannel)
-			channel.send('Something went wrong with the edited message logs.');
-	}
-})
-client.on('messageDelete', message => { //logs deleted messages
-	try {
-		if(message.author.bot) return;
-		if(message.author.id == '180050347589369856') return;
-		if(message.attachments.size > 0) return;
-		let chan = client.channels.get("335818764002131969");
-		const embed = new Discord.RichEmbed()
- 	 .setAuthor(message.member.user.tag, message.member.user.displayAvatarURL)
- 	 .setColor('F56991')
-     .setFooter(`Guild: ${message.guild.id} | Channel: ${message.channel.id}`)
-	 .addField(`${message.guild.name}, ${message.channel.name}`, message)
- 	chan.send({embed})
-	} catch(err) {
-		var channel = client.channels.get(notifyChannel)
-			channel.send('Something went wrong with the deleted message logs.');
-	}
-})
-
 //removes bot's message if reacted with timer
 client.on("messageReactionAdd", (messageReaction, user) => {
 	if(messageReaction.message.author.id !== '329722471295221760') return;
@@ -176,35 +140,6 @@ client.on("messageReactionAdd", (messageReaction, user) => {
         messageReaction.message.delete();
       }
 })
-
-//server announcements for leaves and joins, sends it to main server
-//server announcement for when someone joins
-client.on('guildMemberAdd', member => {
-  var channel = client.channels.get(notifyChannel)
-  let guild = member.guild;
-  const embed = new Discord.RichEmbed()
-  .setAuthor(member.user.tag, member.user.displayAvatarURL)
-  .setColor('F0A38F')
-  .setFooter(`Big Ben sees all™`)
-  .setTimestamp()
-  .addField('User Update',
-    `${member.user}, has joined [${guild}](${guild.id})`)
-  channel.send({embed});
-});
-//server announcement for when someone leaves
-client.on('guildMemberRemove', member => {
-  var channel = client.channels.get(notifyChannel)
-  let guild = member.guild;
-  const embed = new Discord.RichEmbed()
-  .setAuthor(member.user.tag, member.user.displayAvatarURL)
-  .setColor('7C7F86')
-  .setFooter(`Big Ben sees all™`)
-  .setTimestamp()
-  .addField('User update',
-    `${member.user} just left [${guild}](${guild.id})`)
-  channel.send({embed});
-});
-
 
 //big ben base, bongs every hour in utc
 client.on('ready', () => {
