@@ -20,15 +20,11 @@ exports.run = async function (client, message, Discord, args) {
 
 	bonzi.composite(fact, 23, 12)
 	bonzi.getBuffer(Jimp.MIME_PNG, async (err, buffer) => {
-		try {
 			await message.channel.send({
 				files: [{
 					name: 'bonzi.png',
 					attachment: buffer
 				}]
 			})
-		} catch (err) {
-			message.channel.send(`Something went wrong while executing that function.`).then(m => m.delete(5000));
-		}
 	})
 }
