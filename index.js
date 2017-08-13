@@ -6,7 +6,7 @@ var schedule = require('node-schedule');
 const auth = require("./auth.json");
 const notifyChannel = '198399488614727680'
 const prefix = '--'
-const ownerId = '180050347589369856'
+const ownerId = '174627027956137985'
 
 client.login(process.env.TOKEN);
 
@@ -43,16 +43,16 @@ client.on("message", message => {
 			if(message.author.id === '174627027956137985' && message.attachments.size > 0) {
 				return message.delete().catch(O_o=>{})
 			}
-			if(message.author.id === '180050347589369856' && message.content.includes('png')) {
+			if(message.author.id === '174627027956137985' && message.content.includes('png')) {
 				return message.delete().catch(O_o=>{})
 			}
-			if(message.author.id === '180050347589369856' && message.content.includes('PNG')) {
+			if(message.author.id === '174627027956137985' && message.content.includes('PNG')) {
 				return message.delete().catch(O_o=>{})
 			}
-			if(message.author.id === '180050347589369856' && message.content.includes('jpg')) {
+			if(message.author.id === '174627027956137985' && message.content.includes('jpg')) {
 				return message.delete().catch(O_o=>{})
 			}
-			if(message.author.id === '180050347589369856' && message.content.includes('JPG')) {
+			if(message.author.id === '174627027956137985' && message.content.includes('JPG')) {
 				return message.delete().catch(O_o=>{})
 			}
 			if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
@@ -76,7 +76,7 @@ client.on("message", message => {
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact <@174627027956137985> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 			if(message.content == '<@!329722471295221760> help') {
@@ -89,7 +89,7 @@ client.on("message", message => {
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact <@174627027956137985> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 				//vv announcements and insults, tied to homeguild
