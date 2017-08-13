@@ -43,7 +43,7 @@ client.on("message", message => {
 			if(message.author.id === '174627027956137985' && message.attachments.size > 0) {
 				return message.delete().catch(O_o=>{})
 			}
-			if(message.author.id === '180050347589369856' && message.includes('png' || 'jpg')) {
+			if(message.author.id === '180050347589369856' && message.includes('png')) {
 				return message.delete().catch(O_o=>{})
 			}
 			if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
