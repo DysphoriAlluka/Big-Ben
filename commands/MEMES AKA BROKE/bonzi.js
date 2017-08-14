@@ -24,12 +24,11 @@ exports.run = async function (client, message, Discord, args) {
 			await message.channel.send({
 				files: [{
 					name: 'bonzi.png',
-					attachment: 'http://i.imgur.com/ehzN7Ci.png'
+					attachment: buffer
 				}]
 			})
 	})
 	} catch(err) {
 		message.channel.send(`Something went wrong while executing that function.`).then(m => m.delete(5000));
-		return console.log(err)
 	}
 }
