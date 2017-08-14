@@ -24,7 +24,7 @@ exports.run = async function (client, message, Discord, args) {
 			await message.channel.send({
 				files: [{
 					name: 'bonzi.png',
-					attachment: './assets/images/bonzi.png'
+					attachment: 'http://i.imgur.com/ehzN7Ci.png'
 				}]
 			})
 	})
