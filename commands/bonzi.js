@@ -31,5 +31,6 @@ exports.run = async function (client, message, Discord, args) {
 	})
 	} catch(err) {
 		message.channel.send(`Something went wrong while executing that function.`).then(m => m.delete(5000));
+		return console.log(err)
 	}
 }

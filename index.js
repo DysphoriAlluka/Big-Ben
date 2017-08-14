@@ -1,3 +1,8 @@
+/* Yes I know this is very ugly and underdeveloped coding
+*  can't say much more than sHUT tHE HECK UP this is my first time coding 
+*  fucking hell coding is the hardest thing 
+*  i did heavily reference off other open-sourced discord.js bots.
+*/
 //botURL = https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -34,29 +39,11 @@ client.on('guildDelete', guild =>{
 client.on("message", message => {  
 	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
 	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
-	var feeshmain = client.channels.get('323639445842558977');//
+	var feeshmain = client.channels.get('323639445842558977');//feeshworld generoll channel
+	if(message.author.bot)return;
+	if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
+	if(message.content.startsWith(prefix))return;
 		try {
-			if(message.author.bot)return;
-			if(message.author.id === '193430512583311360' && message.attachments.size > 0) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.author.id === '174627027956137985' && message.attachments.size > 0) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.author.id === '174627027956137985' && message.content.includes('png')) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.author.id === '174627027956137985' && message.content.includes('PNG')) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.author.id === '174627027956137985' && message.content.includes('jpg')) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.author.id === '174627027956137985' && message.content.includes('JPG')) {
-				return message.delete().catch(O_o=>{})
-			}
-			if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
-			if(message.content.startsWith(prefix))return;
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
