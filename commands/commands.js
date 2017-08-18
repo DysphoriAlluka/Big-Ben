@@ -5,7 +5,7 @@ exports.run = (client, message, Discord) => {
         .setColor('B6D6E7')
         .setThumbnail(client.user.displayAvatarURL)
         .setFooter("Any message from me can be removed by reacting with a ⏲ emoji.")
-        .addField("__Info:__", "`commands` `help` `nextbong` `support`")
+        .addField("__Info:__", "`commands` `help` `nextbong` `setbong` `support`")
         .addField("__Utility:__", "`colour` `time` `translate` `weather`", true)
         .addField("__Search:__", "`img` `wiki` `urban` `youtube`", true)
         .addField("__Fun:__", "`8ball` `cat` `f` `meme` `rightthere` `shut` `smug` `talk`")
