@@ -9,7 +9,6 @@ const client = new Discord.Client();
 var txtgen = require('txtgen');
 var schedule = require('node-schedule');
 const auth = require("./auth.json");
-const notifyChannel = '198399488614727680'
 const prefix = '--'
 const ownerId = '174627027956137985'
 
@@ -18,7 +17,7 @@ client.login(process.env.TOKEN);
 console.log('Starting Big Ben!')
 //ready and game status, message ready to main server
 client.on("ready", () => {
-  var channel = client.channels.get(notifyChannel);
+  var channel = client.channels.get('198399488614727680');
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
   client.user.setGame("--help");
@@ -27,11 +26,11 @@ client.on("ready", () => {
 
 //message and update when Ben joins or leaves a server
 client.on('guildCreate', guild =>{
-	var channel = client.channels.get(notifyChannel)
+	var channel = client.channels.get('198399488614727680')
 		channel.send(`Ben was added to ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 client.on('guildDelete', guild =>{
-	var channel = client.channels.get(notifyChannel)
+	var channel = client.channels.get('198399488614727680')
 		channel.send(`Ben was removed from ${guild.name}, it has a total of ${guild.members.size} members, and ${guild.channels.size} channels. It is owned by ${guild.owner.user}. (ID: ${guild.id})`)
 });
 
@@ -47,12 +46,6 @@ client.on("message", message => {
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
-			if(message.content.includes('that') && message.content.includes('like button')) {
-				message.react('👍');
-			}
-			if(message.content.includes('THAT') && message.content.includes('LIKE BUTTON')) {
-				message.react('👍');
-			}
 			if(message.content == '<@329722471295221760> help') {
 				const embed = new Discord.RichEmbed()
 					.setAuthor(`BigBen`, client.user.displayAvatarURL)
