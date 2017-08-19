@@ -19,7 +19,7 @@ client.on("ready", () => {
   var channel = client.channels.get('198399488614727680');
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setGame("--help | --setbong");
+  client.user.setPresence({ game: { name: '--help | --setbong', type: 0 } });
   channel.send(`Big Ben is up and running!`);
 });
 
