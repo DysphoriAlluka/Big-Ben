@@ -1,4 +1,4 @@
-//list of insults 
+//list of insults  
 exports.insults = [
   ' Shut your fucking mouth you\'re just really fucking dense.',
   ' Grab a dick and eat it whole, nigger.',
