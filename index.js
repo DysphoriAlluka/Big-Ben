@@ -121,7 +121,7 @@ client.on("messageReactionAdd", (messageReaction, user) => {
 client.on('ready', () => {
 	try{	
 		var rule = new schedule.RecurrenceRule(); 
-		rule.minute = 0; 
+		rule.minute = 9; 
 		rule.hour = 1; 
 		var a = schedule.scheduleJob(rule, function() {
 			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG!***"));
