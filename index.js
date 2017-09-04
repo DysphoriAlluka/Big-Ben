@@ -19,7 +19,7 @@ client.on("ready", () => {
   var channel = client.channels.get('198399488614727680');
   console.log(`Ben is ready boss, bonging in ${client.guilds.size} guilds. `);
   client.consts = require('./consts.js');
-  client.user.setPresence({ game: { name: '--help | --setbong', type: 0 } });
+  client.user.setPresence({ game: { name: '--help', type: 0 } });
   channel.send(`Big Ben is up and running!`);
 });
 
@@ -34,9 +34,7 @@ client.on('guildDelete', guild =>{
 });
 
 //message replies, commands, and announcements
-client.on("message", message => {  
-	var allpainnogainmain = client.channels.get('244294978753396736');//all pain no gain
-	var allpainnogainprison = client.channels.get('252503882951950340'); //all pain no gain bobprison
+client.on("message", message => {
 	var feeshmain = client.channels.get('323639445842558977');//feeshworld generoll channel
 	if(message.author.bot)return;
 	if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
@@ -51,11 +49,11 @@ client.on("message", message => {
     				.setColor('54719E')
        				.setThumbnail(client.user.displayAvatarURL)
 				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
-					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Say `--setbong` to enable Ben\'s hourly bonging!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@174627027956137985> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 			if(message.content == '<@!329722471295221760> help') {
@@ -64,27 +62,14 @@ client.on("message", message => {
     				.setColor('54719E')
        				.setThumbnail(client.user.displayAvatarURL)
 				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
-					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\Say `--setbong` to enable Ben\'s hourly bonging!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@174627027956137985> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 				//vv announcements and insults, tied to homeguild
-					if(message.channel.id =='335764527176089610') {;
-						return allpainnogainmain.send(message.content);
-					}
-					if(message.channel.id =='337007224134303747') {;
-						return allpainnogainmain.send(`${client.consts.insults[Math.round(Math.random() * (client.consts.insults.length - 1))]}`);
-					}
-					if(message.channel.id =='337643020352749569') {;
-						let paragraph = txtgen.paragraph();
-							return allpainnogainmain.send(paragraph);
-					}
-					if(message.channel.id =='337727000036769792') {;
-						return allpainnogainprison.send(message.content);
-					}
 					if(message.channel.id =='335766194525044739') {;
 						return feeshmain.send(message.content);
 					}
@@ -119,7 +104,7 @@ client.on("message", message => {
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, Discord, args);
   } catch (err) {
-    return console.error(err);
+    return console.log(`${command} is not a valid command.`);
   }
 });
 
@@ -132,4 +117,150 @@ client.on("messageReactionAdd", (messageReaction, user) => {
       }
 })
 
-
+//lmfao get ready boii here's the bongs
+client.on('ready', () => {
+	
+		var rule = new schedule.RecurrenceRule(); 
+		rule.minute = 0; 
+		rule.hour = 1; 
+		var a = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG!***"));
+		})
+	  
+	  rule.hour = 2; 
+	
+		var b = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG!***"));
+		})
+	  rule.hour = 3; 
+	
+		var c = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG!***"));
+		})
+	
+	  rule.hour = 4; 
+	
+		var d = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 5; 
+	
+		var e = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 6; 
+	
+		var f = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 7; 
+	
+		var g = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 8; 
+	
+		var g = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 9; 
+	
+		var i = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 10; 
+	
+		var j = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 11; 
+	
+		var k = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 12; 
+	
+		var l = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG!***"));
+		})
+	
+		rule.hour = 13; 
+	
+		var m = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG!***"));
+		})
+	
+		rule.hour = 14; 
+	
+		var n = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 15; 
+	
+		var o = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 16; 
+	
+		var p = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 17; 
+	
+		var q = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 18; 
+	
+		var r = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 19; 
+	
+		var s = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 20; 
+	
+		var t = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 21; 
+	
+		var u = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 22; 
+	
+		var v = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 23; 
+	
+		var w = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+		})
+	
+		rule.hour = 24; 
+	
+		var x = schedule.scheduleJob(rule, function() {
+			client.guilds.map(guild => guild.defaultChannel.send("***BONG!***"));
+		})
+	});	

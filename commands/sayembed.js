@@ -6,6 +6,12 @@ exports.run = async (client, message, Discord, args) => {
       if(!channelMessage) return message.channel.send('Provide something for me to send.').then(m => m.delete(3000));
       let channelid = message.content.split(/\s+/g)[1]
         let channel = client.channels.get(`${channelid}`)
+        const embed = new Discord.RichEmbed()
+        .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
+    	.setColor('48886D')
+        .setTimestamp()
+ 	    .addField('\u200b', channelMessage)
+      channel.send({embed})
             channel.send(channelMessage);
             await message.react("🇸").catch(console.error);
             await message.react("🇪").catch(console.error);
