@@ -6,7 +6,7 @@
 //botURL = https://discordapp.com/api/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var txtgen = require('txtgen');
+var schedule = require('node-schedule');
 const auth = require("./auth.json");
 const prefix = '--'
 const ownerId = '174627027956137985'
@@ -119,7 +119,7 @@ client.on("messageReactionAdd", (messageReaction, user) => {
 
 //lmfao get ready boii here's the bongs
 client.on('ready', () => {
-	
+	try{	
 		var rule = new schedule.RecurrenceRule(); 
 		rule.minute = 0; 
 		rule.hour = 1; 
@@ -263,4 +263,8 @@ client.on('ready', () => {
 		var x = schedule.scheduleJob(rule, function() {
 			client.guilds.map(guild => guild.defaultChannel.send("***BONG!***"));
 		})
-	});	
+	} catch(err) {
+		var channel = client.channels.get('198399488614727680')
+		return channel.send("BONGS HECKING BROKE AAAGAIN FUCK!!!!!!!")
+	}
+});	
