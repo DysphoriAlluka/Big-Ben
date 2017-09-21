@@ -42,6 +42,9 @@ client.on("message", message => {
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
+			if(message.content.includes('fart')) {
+				message.react('🌬');
+			}
 			if(message.content == '<@329722471295221760> help') {
 				const embed = new Discord.RichEmbed()
 					.setAuthor(`BigBen`, client.user.displayAvatarURL)
