@@ -72,7 +72,7 @@ client.on("message", message => {
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 				//vv announcements and insults, tied to homeguild
-					if(message.channel.id =='335766194525044739') {;
+					if(message.channel.id =='360927860229275652') {;
 						return feeshmain.send(message.content);
 					}
 					if(message.content.includes('<@329722471295221760>')) {

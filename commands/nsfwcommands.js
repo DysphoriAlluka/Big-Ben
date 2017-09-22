@@ -1,5 +1,9 @@
 exports.run = (client, message, Discord, args) => {
-    if(!message.channel.nsfw) return message.channel.send('This is not an NSFW channel!').then(m => m.delete(5000));
+    if(!message.channel.nsfw) {
+        message.channel.send('This is not an NSFW channel!').then(m => m.delete(5000));
+        return message.react('✖')
+    }
+    
         const embed = new Discord.RichEmbed()
             .setAuthor("NSFW Commands", client.user.displayAvatarURL)
             .setDescription(`Use \`--help <commandname>\` for more details.`)
