@@ -35,6 +35,7 @@ client.on('guildDelete', guild =>{
 //message replies, commands, and announcements
 client.on("message", message => {
 	var feeshmain = client.channels.get('323639445842558977');//feeshworld generoll channel
+	var kitmain = client.channels.get('240527326964613120') //gitkatz main nchannel
 	if(message.author.bot)return;
 	if(message.content.startsWith('//') && message.guild.id == '198399488614727680')return message.react('🙊');
 	if(message.content.startsWith(prefix))return;
@@ -72,8 +73,11 @@ client.on("message", message => {
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 				//vv announcements and insults, tied to homeguild
-					if(message.channel.id =='360927860229275652') {;
+					if(message.channel.id =='360927860229275652') {
 						return feeshmain.send(message.content);
+					}
+					if(message.channel.id == "361966239318540309") {
+						return kitmain.send(message.content);
 					}
 					if(message.content.includes('<@329722471295221760>')) {
 						return message.reply("bong?");
