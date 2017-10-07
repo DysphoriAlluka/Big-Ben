@@ -2,7 +2,7 @@ var schedule = require('node-schedule');
 
 exports.run = async (client, message, Discord) => {
     if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send('You cannot use this command! Ask someone of higher rankings.')
-    message.channel.send(`Bong channel set to ${message.channel}. There is currently no way to reverse this, if I stop bonging, please use this command again. It is currently a temporary workaround until I find a permanent solution. This is due to Discord deprecating default channels.`)
+    message.channel.send(`Bong channel set to ${message.channel}. There is currently no way to reverse this, if I stop bonging, please use this command again. This is due to Discord deprecating default channels.`)
     var rule = new schedule.RecurrenceRule(); 
     rule.minute = 0
     rule.hour = 1; 

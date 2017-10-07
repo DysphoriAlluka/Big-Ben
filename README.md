@@ -7,5 +7,3 @@
 ## Want to Run it Yourself?
 #### NOPLEASE
 
-###### ily dad <3
-

@@ -10,7 +10,7 @@ exports.run = async (client, message, Discord, args) => {
         .setAuthor(`${message.member.user.tag}`, message.member.user.displayAvatarURL)
     	.setColor('48886D')
         .setTimestamp()
- 	    .addField('U GOT MAIL', channelMessage)
+ 	    .addField(channelMessage)
       channel.send({embed})
             await message.react("🇸").catch(console.error);
             await message.react("🇪").catch(console.error);
