@@ -1,9 +1,8 @@
 <p style="text-align:center;">
 <img src="http://i.imgur.com/8sK4dJR.png"></p>
 
-# Big Ben: The Sadistically Defective Discord Bot & I KNOW IT'S OPEN SOURCED BUT YOU CAN'T USE THIS I'LL SUE
-#### I am not joking this code is 100% private and I'm poor I can't afford private repos 🙏
+## [Click here for a more eloquent and functional Discord bot!](https://github.com/DysphoriAlluka/Komugari)
+https://discordapp.com/oauth2/authorize?client_id=365907645795794946&scope=bot&permissions=305523782
 
-## Want to Run it Yourself?
-#### NOPLEASE
 
+##### This code is left as-is and I will not update it any further (if not required to) nor provide any form of support!

@@ -12,7 +12,7 @@ const ownerId = '174627027956137985'
 
 client.login(process.env.TOKEN);
 
-console.log('Starting Big Ben!')
+console.log('Starting Ben!')
 //ready and game status, message ready to main server
 client.on("ready", () => {
   var channel = client.channels.get('198399488614727680');
@@ -20,6 +20,8 @@ client.on("ready", () => {
   client.consts = require('./consts.js');
   client.user.setPresence({ game: { name: '--help | --setbong', type: 0 } });
   channel.send(`Big Ben is up and running!`);
+  // Set username
+	client.user.setUsername('')
 });
 
 //message and update when Ben joins or leaves a server
@@ -43,20 +45,17 @@ client.on("message", message => {
 			if(message.content.includes('press f')){
 				message.react('🇫');
 			};
-			if(message.content.includes('fart')) {
-				message.react('🌬');
-			}
 			if(message.content == '<@329722471295221760> help') {
 				const embed = new Discord.RichEmbed()
 					.setAuthor(`BigBen`, client.user.displayAvatarURL)
     				.setColor('54719E')
        				.setThumbnail(client.user.displayAvatarURL)
 				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
-					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+					.setDescription('Simple, multifunctional bot with a focus on time, memes, and nsfw!\n\*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact Mako#8739 for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 			if(message.content == '<@!329722471295221760> help') {
@@ -65,11 +64,11 @@ client.on("message", message => {
     				.setColor('54719E')
        				.setThumbnail(client.user.displayAvatarURL)
 				    .setFooter(`Any message from the me can be removed by reacting with a ⏲ emoji.`)
-					.setDescription('Simple bot whose main functionality is to bong every hour in UTC!*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
+					.setDescription('Simple, multifunctional bot with a focus on time, memes, and nsfw!*Annoying? Yes. Stupid? Definitely. Useful? Not so much.*')
 				    .addField(`__This is a terrible bot:__`, `Me too thanks <:feelsOKmAng:342035709999448067>`, true)
         			.addField(`__Invite Me!:__`, `[Invite Link](https://discordapp.com/oauth2/authorize?client_id=329722471295221760&scope=bot&permissions=2083912831)`, true)
         			.addField(`__Commands:__`, `Use \`--commands\` to see a list of my commands.\n\You can also use \`--help [command]\` to get help on a specific command.`)
-        			.addField(`__Support:__`, `Contact <@180050347589369856> for direct support.\n\Or use \`--support [message]\` to send a support message.`);
+        			.addField(`__Support:__`, `Contact Mako#8739 for direct support.\n\Or use \`--support [message]\` to send a support message.`);
      			return message.channel.send({embed}).then(m=>m.react("⏲"))
 			}
 				//vv announcements and insults, tied to homeguild
