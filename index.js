@@ -132,143 +132,143 @@ client.on('ready', () => {
     rule.minute = 0;
     rule.hour = 1;
     var a = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG!***"));
     })
 
     rule.hour = 2;
 
     var b = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG!***"));
     })
     rule.hour = 3;
 
     var c = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG!***"));
     })
 
     rule.hour = 4;
 
     var d = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 5;
 
     var e = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 6;
 
     var f = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 7;
 
     var g = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 8;
 
     var g = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 9;
 
     var i = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 10;
 
     var j = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 11;
 
     var k = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 12;
 
     var l = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 13;
 
     var m = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG!***"));
     })
 
     rule.hour = 14;
 
     var n = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG!***"));
     })
 
     rule.hour = 15;
 
     var o = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG!***"));
     })
 
     rule.hour = 16;
 
     var p = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 17;
 
     var q = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 18;
 
     var r = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 19;
 
     var s = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 20;
 
     var t = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 21;
 
     var u = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 22;
 
     var v = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 23;
 
     var w = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 
     rule.hour = 24;
 
     var x = schedule.scheduleJob(rule, function() {
-        client.guilds.map(guild => guild.channels.first().send("***BONG!***"));
+        client.guilds.map(guild => guild.channels.first().send("***BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG!***"));
     })
 });
